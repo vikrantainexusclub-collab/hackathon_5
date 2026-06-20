@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVIK Hackathon 5.0 | Vikrant Institute of Technology & Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="styles.css">
+</head>
+ <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Geometric Shapes -->
+    <div class="geometric-bg">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo glitch">INNOVIK 5.0</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#problems" class="nav-link">Problems</a></li>
+                <li><a href="#rules" class="nav-link">Rules</a></li>
+                <li><a href="#prizes" class="nav-link">Prizes</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+          <!-- <div class="hero-badge fade-in">🚀 Registration Open Now</div> -->
+            <!-- <img src="https://i.ibb.co/3YdkRd2j/9a16bdc968115f58668f35dd4bf26158.jpg" width="50%"/> -->
+            <h1 class="fade-in">INNOVIK HACKATHON 5.0</h1>
+            <p class="tagline fade-in">CODE • CREATE • CONQUER</p>
+            <p class="subtitle fade-in">Vikrant Institute of Technology & Management, Indore</p>
+            <p class="date fade-in">4th - 5th October 2025</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container fade-in">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://forms.gle/4t3kMc6BMwiX9joW6" target="_blank" class="btn btn-primary magnetic">Register Now</a>
+                <a href="#about" class="btn btn-secondary magnetic">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="g fade-in">
+        <h2 class="section-title">About INNOVIK 5.0</h2>
+        <div class="about-content">
+            <p>Welcome to INNOVIK Hackathon 5.0, where innovation meets technology! Join us for an extraordinary 36-hour coding marathon that brings together the brightest minds to solve real-world challenges through cutting-edge technology solutions.</p>
+            
+            <p>This premier hackathon focuses on three critical themes: <strong>Healthcare Innovation</strong>, <strong>Sustainable Technology</strong>, and <strong>Cybersecurity Solutions</strong>. Participants will have the opportunity to work on 12 carefully curated problem statements that address pressing societal needs.</p>
+        </div>
+
+        <div class="about-stats">
+            <div class="stat-card glass-card tilt">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Participants</span>
+            </div>
+            <!-- <div class="stat-card glass-card tilt">
+                <span class="stat-number">₹100000+</span>
+                <span class="stat-label">Prize Pool</span>
+            </div> -->
+            <div class="stat-card glass-card tilt">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Hours</span>
+            </div>
+            <div class="stat-card glass-card tilt">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Problem Statements</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section fade-in">
+        <h2 class="section-title">Program Flow</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h1>Day 1</h1>
+                    <h3> Reporting Time & Registration</h3>
+                    <!-- <p>Welcome participants</p> -->
+                    <small>9:30 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Inauguration Ceremony</h3>
+                    <small>10:00 - 11:00 AM </small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Coding Begins</h3>
+                    <!-- <p>Hackathon Official Start</p> -->
+                    <small>11:30 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Mentor Sessions</h3>
+                    <small>12:00 - 1:00 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Lunch Break</h3>
+                    <small>1:00 - 2:00 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Start Coding</h3>
+                    <small>2:00 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Tea & Snacks</h3>
+                    <small>4:30 - 5:00 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>First Round Of Evaluation</h3>
+                    <small>5:00 - 7:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Dinner</h3>
+                    <!-- <p>Canteen</p> -->
+                    <small>7:30 - 8:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Onwards Coding</h3>
+                    <!-- <p>Over Night Coding</p> -->
+                    <small>8:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Mid-Night-Energy-Boost</h3>
+                    <!-- <p>(Tea / Coffee / Drinks / Juice) </p> -->
+                    <small>11:00 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h1>Day 2</h1>
+                    <h3>Second Mentor Session</h3>
+                    <!-- <p>5 - 7 Min per team</p> -->
+                    <small>12:00 - 12:30 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Recreational Activity</h3>
+                    <!-- <p>Music / Dance / Team Activity</p> -->
+                    <small>1:00 - 2:00 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Over Night Coding Continues</h3>
+                    <!-- <p>Snacks / Biscuit Served at 3:00 AM </p> -->
+                    <small>2:00 - 6:00 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Breakfast</h3>
+                    <small>6:30 - 7:30 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Final Round Of Evaluation</h3>
+                    <!-- <p>Presentation + Q&A , Judge by panel</p> -->
+                    <small>11:30 - 12:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Lunch Time</h3>
+                    <small>12:30 - 1:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Valedictort & Prize Distribution Ceremony</h3>                
+                    <small>1:30 - 2:30 PM</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statements Section -->
+    <section id="problems" class="section fade-in">
+        <h2 class="section-title">Problem Statements </h2>
+        <div class="problems-grid">
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">01</div>
+                        <div class="problem-title">AI-Powered Health Diagnostics</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (AI/ML, Computer Vision)</div>
+                <div class="problem-theme">Theme: Healthcare Innovation</div>
+                <div class="problem-description">
+                    Develop an AI-powered diagnostic tool that can analyze medical images (X-rays, CT scans, MRIs) to detect diseases like pneumonia, fractures, or tumors. The solution should provide accurate results with confidence scores and be accessible to healthcare professionals in remote areas with limited specialist availability.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">02</div>
+                        <div class="problem-title">Smart Medication Management</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Hardware + Software (IoT, Mobile App)</div>
+                <div class="problem-theme">Theme: Healthcare Innovation</div>
+                <div class="problem-description">
+                    Create a comprehensive medication management system that includes smart pill dispensers, mobile app reminders, dosage tracking, and integration with healthcare providers. The system should help elderly patients and those with chronic conditions maintain proper medication schedules and prevent adverse drug interactions.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">03</div>
+                        <div class="problem-title">Telemedicine Platform for Rural Areas</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (Web/Mobile Platform)</div>
+                <div class="problem-theme">Theme: Healthcare Innovation</div>
+                <div class="problem-description">
+                    Design a comprehensive telemedicine platform that works efficiently on low-bandwidth connections, supports multiple regional languages, includes basic diagnostic tools, and enables secure communication between patients in rural areas and healthcare professionals in urban centers.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">04</div>
+                        <div class="problem-title">Mental Health Support System</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (AI Chatbot, Mobile App)</div>
+                <div class="problem-theme">Theme: Healthcare Innovation</div>
+                <div class="problem-description">
+                    Develop an AI-powered mental health support platform that provides 24/7 emotional support, mood tracking, personalized therapy recommendations, crisis intervention, and connects users with professional counselors when needed. The system should maintain strict privacy and confidentiality standards.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">05</div>
+                        <div class="problem-title">Smart Energy Grid Management</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Hardware + Software (IoT, AI, Blockchain)</div>
+                <div class="problem-theme">Theme: Sustainable Technology</div>
+                <div class="problem-description">
+                    Create an intelligent energy grid management system that optimizes renewable energy distribution, predicts energy demand, manages load balancing, and enables peer-to-peer energy trading between households with solar panels or other renewable energy sources.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">06</div>
+                        <div class="problem-title">Waste Management Optimization</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Hardware + Software (IoT, Route Optimization)</div>
+                <div class="problem-theme">Theme: Sustainable Technology</div>
+                <div class="problem-description">
+                    Develop a smart waste management system that uses IoT sensors to monitor bin fill levels, optimizes collection routes, categorizes waste types, tracks recycling rates, and provides analytics to municipal authorities for better resource allocation and environmental impact reduction.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">07</div>
+                        <div class="problem-title">Carbon Footprint Tracker</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (Mobile App, Data Analytics)</div>
+                <div class="problem-theme">Theme: Sustainable Technology</div>
+                <div class="problem-description">
+                    Build a comprehensive carbon footprint tracking application that monitors individual and organizational carbon emissions from transportation, energy usage, food consumption, and lifestyle choices. Include gamification elements, reduction suggestions, and carbon offset marketplace integration.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">08</div>
+                        <div class="problem-title">Smart Agriculture System</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Hardware + Software (IoT, AI, Drones)</div>
+                <div class="problem-theme">Theme: Sustainable Technology</div>
+                <div class="problem-description">
+                    Create an intelligent farming system that uses IoT sensors, drones, and AI to monitor soil conditions, weather patterns, crop health, and automate irrigation. The system should optimize water usage, predict harvest times, and provide actionable insights to farmers for sustainable agriculture practices.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">09</div>
+                        <div class="problem-title">Advanced Threat Detection System</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (AI/ML, Network Security)</div>
+                <div class="problem-theme">Theme: Cybersecurity Solutions</div>
+                <div class="problem-description">
+                    Develop an AI-powered cybersecurity system that can detect and prevent advanced persistent threats, zero-day attacks, and insider threats in real-time. The system should use machine learning to adapt to new attack patterns and provide automated incident response capabilities.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">10</div>
+                        <div class="problem-title">Secure Digital Payments</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (FinTech, Blockchain, Mobile)</div>
+                <div class="problem-theme">Theme: Cybersecurity Solutions</div>
+                <div class="problem-description">
+                    Build a secure digital payment platform with advanced fraud detection, multi-factor authentication, and blockchain-based transaction verification. The system should be user-friendly for rural populations while maintaining bank-level security standards and supporting offline transactions.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">11</div>
+                        <div class="problem-title">Student Cyber Safety Platform</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Software (Web/Mobile, AI Monitoring)</div>
+                <div class="problem-theme">Theme: Cybersecurity Solutions</div>
+                <div class="problem-description">
+                    Create a comprehensive cyber safety platform for students that includes cyberbullying detection, safe browsing tools, digital literacy education, parental controls, anonymous reporting systems, and AI-powered content filtering to protect young users from online threats.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">12</div>
+                        <div class="problem-title">Next-Gen Authentication System</div>
+                    </div>
+                    <i class="fas fa-chevron-down expand-icon"></i>
+                </div>
+                <div class="problem-category">Hardware + Software (Biometrics, Blockchain)</div>
+                <div class="problem-theme">Theme: Cybersecurity Solutions</div>
+                <div class="problem-description">
+                    Design a revolutionary authentication system that combines multiple biometric factors, behavioral analysis, and blockchain-based identity verification. The system should be passwordless, highly secure, privacy-preserving, and accessible across various devices and platforms.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section fade-in">
+        <h2 class="section-title">Rules & Guidelines</h2>
+        <div class="rules-container">
+            <ul class="rules-list">
+                <li>Team size: Up to 4 members; at least 1 female member is compulsory..</li>
+                <li>Eligibility: Open to students, developers, and innovators across India.</li>
+                <li>Originality: All code and assets must be original or properly licensed. Strictly no plagiarism.</li>
+                <li>Rounds: Multiple coding rounds, mentor checkpoints, and evaluations.</li>
+                <li>Judging criteria: Innovation, impact, feasibility, user experience, and presentation.</li>
+                <li>Code of conduct: Respectful, inclusive collaboration is mandatory.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section id="prizes" class="section fade-in">
+        <h2 class="section-title">Prizes & Rewards</h2>
+        <div class="prizes-grid">
+            <div class="prize-card tilt">
+                <div class="prize-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>🥇 First Prize</h3>
+                <p><strong>₹40,000</strong> Cash Prize</p>
+                <p>🚀 Incubation Opportunity</p>
+                <p>🏆 Winner Certificate</p>
+                <p>💼 Industry Mentorship</p>
+                <!-- <p>📱 Latest Tech Gadgets</p> -->
+            </div>
+            
+            <div class="prize-card tilt">
+                <div class="prize-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <h3>🥈 Second Prize</h3>
+                <p><strong>₹25,000</strong> Cash Prize</p>
+                <p>🎯 Mentorship Program</p>
+                <p>🏅 Runner-up Certificate</p>
+                <!-- <p>💻 Premium Software Licenses</p> -->
+                <p>📚 Learning Resources</p>
+            </div>
+            
+            <div class="prize-card tilt">
+                <div class="prize-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>🥉 Third Prize</h3>
+                <p><strong>₹15,000</strong> Cash Prize</p>
+                <p>🌐 Industry Connect</p>
+                <p>🎖️ Achievement Certificate</p>
+                <!-- <p>🎧 Tech Accessories</p> -->
+                <!-- <p>📖 Course Vouchers</p> -->
+            </div>
+            
+            <div class="prize-card tilt">
+                <div class="prize-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>🌟 Special Categories</h3>
+                <p>💡 Best Innovation Award</p>
+                <p>🌍 Best Social Impact</p>
+                <p>⚡ Best Technical Implementation</p>
+                <p>🎨 Best UI/UX Design</p>
+                <p>🔥 Most Creative Solution</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 8889997217</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 7566027158</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9926465107</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>hackathon@vitmindore.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Vikrant Institute of Technology & Management, Indore</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-link"></i>
+                    <a href="https://forms.gle/4t3kMc6BMwiX9joW6" target="_blank">Registration Form</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.vitm.edu.in/" target="_blank">Official Website</a>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2873.3224276083506!2d75.79123007398529!3d22.579376532724446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f992ea8f8d8b%3A0x88c25aa95f76da8f!2sVikrant%20Group%20of%20Institutions-VITM!5e1!3m2!1sen!2sin!4v1757532246224!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-discord"></i></a>
+        </div>
+        <p>© 2025 Vikrant Institute of Technology & Management. All rights reserved.</p>
+        <p>Made with ❤️ for innovation and technology</p>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="scrollToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Advanced JavaScript for Premium Interactions
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+                initializeAnimations();
+            }, 1500);
+        });
+
+        // Initialize all animations and effects
+        function initializeAnimations() {
+            createStars();
+            createParticles();
+            initializeScrollAnimations();
+            initializeCountdown();
+            initializeMagneticEffect();
+            initializeTiltEffect();
+        }
+
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            const colors = ['#00f5ff', '#bf00ff', '#ff0080', '#39ff14'];
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Advanced Scroll Effects
+        let ticking = false;
+
+        function updateScrollEffects() {
+            const scrolled = window.pageYOffset;
+            const navbar = document.getElementById('navbar');
+            const scrollProgress = document.getElementById('scrollProgress');
+            const fab = document.getElementById('scrollToTop');
+
+            // Navbar effects
+            if (scrolled > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll progress bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (winScroll / height) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+
+            // Floating Action Button
+            if (scrolled > 300) {
+                fab.classList.add('visible');
+            } else {
+                fab.classList.remove('visible');
+            }
+
+            // Parallax effect for hero
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const rate = scrolled * -0.5;
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+
+            ticking = false;
+        }
+
+        function requestScrollUpdate() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestScrollUpdate);
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Advanced Scroll Animations
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Animate timeline items with stagger
+                        if (entry.target.classList.contains('timeline-item')) {
+                            const items = document.querySelectorAll('.timeline-item');
+                            items.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.style.animationDelay = `${index * 0.2}s`;
+                                    item.classList.add('visible');
+                                }, index * 200);
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .timeline-item').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Countdown Timer
+        function initializeCountdown() {
+            const eventDate = new Date('2025-10-04T09:00:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                } else {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                }
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Problem card toggle functionality
+        function toggleProblem(card) {
+                  card.classList.toggle('expanded');
+            
+            // Add ripple effect
+            const rect = card.getBoundingClientRect();
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            ripple.style.left = '50%';
+            ripple.style.top = '50%';
+            card.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        }
+
+
+        // Magnetic effect for buttons
+        function initializeMagneticEffect() {
+      
+        }
+
+        // 3D Tilt effect
+        function initializeTiltEffect() {
+   
+        }
+
+        // Advanced button ripple effect
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Toast notification system
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Easter egg - Konami code
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.length === konamiSequence.length && 
+                konamiCode.every((code, index) => code === konamiSequence[index])) {
+                
+                document.body.classList.add('rainbow-mode');
+                showToast('🎉 Easter egg activated! Rainbow mode enabled!', 'success');
+                
+                setTimeout(() => {
+                    document.body.classList.remove('rainbow-mode');
+                }, 5000);
+            }
+        });
+
+        // Performance optimization - Intersection Observer for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                // Close mobile menu
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                
+                // Close expanded problem cards
+                document.querySelectorAll('.problem-card.expanded').forEach(card => {
+                    card.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Form validation and submission
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add any form handling logic here
+            console.log('🚀 INNOVIK Hackathon 5.0 website loaded successfully!');
+            
+            // Show welcome message
+            setTimeout(() => {
+                showToast('Welcome to INNOVIK Hackathon 5.0! 🎉', 'success');
+            }, 2000);
+        });
+
+        // Advanced cursor trail effect (optional)
+        let mouseX = 0, mouseY = 0;
+        let trailElements = [];
+
+        function createCursorTrail() {
+            for (let i = 0; i < 10; i++) {
+                const trail = document.createElement('div');
+                trail.style.cssText = `
+                    position: fixed;
+                    width: 4px;
+                    height: 4px;
+                    background: var(--neon-blue);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 9999;
+                    opacity: ${1 - i * 0.1};
+                    transition: all 0.1s ease;
+                `;
+                document.body.appendChild(trail);
+                trailElements.push(trail);
+            }
+        }
+
+        function updateCursorTrail() {
+            trailElements.forEach((trail, index) => {
+                setTimeout(() => {
+                    trail.style.left = mouseX + 'px';
+                    trail.style.top = mouseY + 'px';
+                }, index * 20);
+            });
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            updateCursorTrail();
+        });
+
+        // Initialize cursor trail on desktop only
+        if (window.innerWidth > 768) {
+            createCursorTrail();
+        }
+
+        // Cleanup and optimization
+        window.addEventListener('beforeunload', () => {
+            // Clean up any intervals or listeners
+            console.log('Cleaning up resources...');
+        });
+
+        // Service Worker registration for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026
- | Vikrant Institute of Technology & Management</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+        | Vikrant Institute of Technology & Management</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -79,8 +82,15 @@
         }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
 
         /* Floating Geometric Shapes */
@@ -136,9 +146,11 @@
                 transform: translateY(0px) rotate(0deg);
                 opacity: 0.1;
             }
+
             50% {
                 opacity: 0.3;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0.1;
@@ -178,7 +190,7 @@
             font-weight: 900;
             background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
-             background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             color: var(--neon-blue);
             background-clip: text;
@@ -190,6 +202,7 @@
             0% {
                 filter: drop-shadow(0 0 5px var(--neon-blue));
             }
+
             100% {
                 filter: drop-shadow(0 0 20px var(--neon-purple));
             }
@@ -273,8 +286,13 @@
         }
 
         @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(10px, 10px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(10px, 10px);
+            }
         }
 
         .hero-content {
@@ -314,8 +332,15 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         @keyframes fadeInUp {
@@ -323,6 +348,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -354,8 +380,15 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         .cta-buttons {
@@ -532,7 +565,7 @@
             margin-top: 0.5rem;
         }
 
-        
+
 
         /* Advanced Timeline */
         .timeline {
@@ -616,6 +649,7 @@
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -627,6 +661,7 @@
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -723,7 +758,7 @@
         .problem-description {
             color: var(--text-secondary);
             line-height: 1.8;
-          /*  max-height: 0; */
+            /*  max-height: 0; */
             /*overflow: hidden; */
         }
 
@@ -780,9 +815,15 @@
             font-weight: bold;
             font-size: 1.5rem;
         }
+
         /* Prizes (big, animated) */
-    .prize-wrap{display:grid; gap:22px; place-items:center}
-    .pool-badge{
+        .prize-wrap {
+            display: grid;
+            gap: 22px;
+            place-items: center
+        }
+
+        .pool-badge {
             font-family: 'Orbitron', monospace;
             font-size: 1.8rem;
             font-weight: 900;
@@ -798,49 +839,105 @@
             0% {
                 filter: drop-shadow(0 0 5px var(--neon-blue));
             }
+
             100% {
                 filter: drop-shadow(0 0 20px var(--neon-purple));
             }
         }
-    .trophy{
-      font-size: clamp(56px, 9vw, 120px);
-      filter: drop-shadow(0 0 16px rgba(255,200,87,.35));
-      animation: glow 2.2s ease-in-out infinite;
-    }
-    @keyframes glow{
-      0%,100%{transform:translateY(0) scale(1); filter: drop-shadow(0 0 10px rgba(255,200,87,.25))}
-      50%{transform:translateY(-6px) scale(1.03); filter: drop-shadow(0 0 22px rgba(255,200,87,.45))}
-    }
-    .prize-grid{
-      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; width:min(980px, 100%)
-    }
-    .prize-card{
-      text-align:center;padding:18px;border-radius:16px;border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow)
-    }
-    .prize-card .medal{font-size:38px; display:block; margin-bottom:8px; animation: bob 3s ease-in-out infinite}
-    .prize-card:nth-child(2) .medal{animation-delay:.2s}
-    .prize-card:nth-child(3) .medal{animation-delay:.4s}
-    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-    .extras{color:#d7e6ff; margin-bottom: 20px;}
 
-    .partners, .sponsors{
-      display: flex;
-      gap: 20px;
-    }
-    .logo-grid{
-        display:grid;
-        border:1px solid var(--border); border-radius:16px; padding:16px;
-        grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:16px; margin-top:12px; background:rgba(255,255,255,.04)}
-    .logo{
-      height:72px;
-      border-radius:12px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#aac;
-    }
+        .trophy {
+            font-size: clamp(56px, 9vw, 120px);
+            filter: drop-shadow(0 0 16px rgba(255, 200, 87, .35));
+            animation: glow 2.2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                filter: drop-shadow(0 0 10px rgba(255, 200, 87, .25))
+            }
+
+            50% {
+                transform: translateY(-6px) scale(1.03);
+                filter: drop-shadow(0 0 22px rgba(255, 200, 87, .45))
+            }
+        }
+
+        .prize-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            width: min(980px, 100%)
+        }
+
+        .prize-card {
+            text-align: center;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+            box-shadow: var(--shadow)
+        }
+
+        .prize-card .medal {
+            font-size: 38px;
+            display: block;
+            margin-bottom: 8px;
+            animation: bob 3s ease-in-out infinite
+        }
+
+        .prize-card:nth-child(2) .medal {
+            animation-delay: .2s
+        }
+
+        .prize-card:nth-child(3) .medal {
+            animation-delay: .4s
+        }
+
+        @keyframes bob {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-6px)
+            }
+        }
+
+        .extras {
+            color: #d7e6ff;
+            margin-bottom: 20px;
+        }
+
+        .partners,
+        .sponsors {
+            display: flex;
+            gap: 20px;
+        }
+
+        .logo-grid {
+            display: grid;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+            background: rgba(255, 255, 255, .04)
+        }
+
+        .logo {
+            height: 72px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aac;
+        }
 
         /* owr Oraganizer*/
         .organizer-grid {
@@ -895,8 +992,15 @@
         }
 
         @keyframes iconFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .organizer-card h3 {
@@ -954,7 +1058,8 @@
             width: 25px;
         }
 
-        .contact-item span, .contact-item a {
+        .contact-item span,
+        .contact-item a {
             color: var(--text-secondary);
             text-decoration: none;
         }
@@ -1158,12 +1263,15 @@
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.7;
             }
+
             90% {
                 opacity: 0.7;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0;
@@ -1177,18 +1285,25 @@
         }
 
         @keyframes glitch {
-            0%, 90%, 100% {
+
+            0%,
+            90%,
+            100% {
                 transform: translate(0);
             }
+
             20% {
                 transform: translate(-2px, 2px);
             }
+
             40% {
                 transform: translate(-2px, -2px);
             }
+
             60% {
                 transform: translate(2px, 2px);
             }
+
             80% {
                 transform: translate(2px, -2px);
             }
@@ -1199,7 +1314,7 @@
             .hero h1 {
                 font-size: 4rem;
             }
-            
+
             .section-title {
                 font-size: 3rem;
             }
@@ -1389,8 +1504,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Easter Egg Styles */
@@ -1399,8 +1519,13 @@
         }
 
         @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
         }
 
         /* Ripple Effect */
@@ -1460,6 +1585,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -1471,10 +1597,10 @@
 
     <!-- Animated Background -->
     <div class="animated-bg"></div>
-    
+
     <!-- Stars Background -->
     <div class="stars" id="stars"></div>
-    
+
     <!-- Geometric Shapes -->
     <div class="geometric-bg">
         <div class="shape"></div>
@@ -1509,7 +1635,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-          <!-- <div class="hero-badge fade-in">🚀 Registration Open Now</div> -->
+            <!-- <div class="hero-badge fade-in">🚀 Registration Open Now</div> -->
             <!-- <img src="https://i.ibb.co/3YdkRd2j/9a16bdc968115f58668f35dd4bf26158.jpg" width="50%"/> -->
             <h1 class="fade-in">
                 INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026
@@ -1518,7 +1644,7 @@
             <p class="tagline fade-in">CODE • CREATE • CONQUER</p>
             <p class="subtitle fade-in">Vikrant Institute of Technology & Management, Indore</p>
             <p class="date fade-in">15–16 September 2026</p>
-            
+
             <!-- Countdown Timer -->
             <div class="countdown-container fade-in">
                 <div class="countdown-item">
@@ -1550,10 +1676,14 @@
     <section id="about" class="section fade-in">
         <h2 class="section-title">INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026</h2>
         <div class="about-content">
-            <p>About INNOVIK 6.0: INNOVIK 6.0 – International Hackathon 2026 is a global innovation challenge designed to bring together students, innovators, developers, researchers, and technology enthusiasts to develop impactful solutions for real-world challenges through emerging technologies and intelligent systems.The hackathon aims to foster innovation, creativity, collaboration, entrepreneurship, and technology-driven problem solving while providing participants with national and international exposure.
-</p>
+            <p>About INNOVIK 6.0: INNOVIK 6.0 – International Hackathon 2026 is a global innovation challenge designed
+                to bring together students, innovators, developers, researchers, and technology enthusiasts to develop
+                impactful solutions for real-world challenges through emerging technologies and intelligent systems.The
+                hackathon aims to foster innovation, creativity, collaboration, entrepreneurship, and technology-driven
+                problem solving while providing participants with national and international exposure.
+            </p>
             <p>This premier hackathon focuses on themes: <strong>Agentic AI for Smart Solutions</strong></p>
-            
+
         </div>
 
         <div class="about-stats">
@@ -1695,7 +1825,7 @@
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Valedictort & Prize Distribution Ceremony</h3>                
+                    <h3>Valedictort & Prize Distribution Ceremony</h3>
                     <small>1:30 - 2:30 PM</small>
                 </div>
             </div>
@@ -1712,12 +1842,18 @@
                         <div class="problem-number">IV-01</div>
                         <div class="problem-title">Intelligent Academic Planning & Student Success Platform </div>
                     </div>
-                    
+
                 </div>
                 <div class="problem-category">Category: Software + AI/ML + Cloud Computing + Data Analytics</div>
                 <div class="problem-theme">Theme: AI-Driven Smart Education and Student Success Management</div>
                 <div class="problem-description">
-                   An Intelligent Academic Planning & Student Success Platform is a smart web-based system that helps students effectively plan their academic journey. It provides personalized course recommendations, semester-wise planning, and progress tracking based on students' academic performance. The platform uses data analytics to identify at-risk students and suggests timely interventions to improve learning outcomes. It also enables faculty to monitor student performance through interactive dashboards and reports. Overall, the system enhances academic decision-making, improves student success, and supports efficient educational management.
+                    An Intelligent Academic Planning & Student Success Platform is a smart web-based system that helps
+                    students effectively plan their academic journey. It provides personalized course recommendations,
+                    semester-wise planning, and progress tracking based on students' academic performance. The platform
+                    uses data analytics to identify at-risk students and suggests timely interventions to improve
+                    learning outcomes. It also enables faculty to monitor student performance through interactive
+                    dashboards and reports. Overall, the system enhances academic decision-making, improves student
+                    success, and supports efficient educational management.
                 </div>
             </div>
 
@@ -1727,12 +1863,18 @@
                         <div class="problem-number">IV-02</div>
                         <div class="problem-title">Smart Healthcare Assistance & Patient Monitoring System</div>
                     </div>
-                    
+
                 </div>
-                <div class="problem-category">Software + Hardware (AI, IoT, Cloud Computing, Healthcare Technology)</div>
+                <div class="problem-category">Software + Hardware (AI, IoT, Cloud Computing, Healthcare Technology)
+                </div>
                 <div class="problem-theme">Theme: AI-Enabled Smart Healthcare and Remote Patient Monitoring</div>
                 <div class="problem-description">
-                    The Smart Healthcare Assistance & Patient Monitoring System continuously monitors patients' vital signs using IoT-enabled sensors and wearable devices. It analyzes health data in real time using AI algorithms to detect abnormalities and predict potential medical risks. The system sends instant alerts to doctors, caregivers, or family members during emergencies. Cloud technology securely stores patient records and enables remote access for healthcare professionals. This solution improves patient care, supports telemedicine, and enhances healthcare efficiency and accessibility.
+                    The Smart Healthcare Assistance & Patient Monitoring System continuously monitors patients' vital
+                    signs using IoT-enabled sensors and wearable devices. It analyzes health data in real time using AI
+                    algorithms to detect abnormalities and predict potential medical risks. The system sends instant
+                    alerts to doctors, caregivers, or family members during emergencies. Cloud technology securely
+                    stores patient records and enables remote access for healthcare professionals. This solution
+                    improves patient care, supports telemedicine, and enhances healthcare efficiency and accessibility.
                 </div>
             </div>
 
@@ -1740,15 +1882,20 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-03</div>
-                        <div class="problem-title">Rural Healthcare AI Advisor</div>
+                        <div class="problem-title">Sustainable Agriculture Advisory Platform</div>
                     </div>
-                    
-                </div>
-                <div class="problem-category">Software (AI, Mobile App, Telemedicine)</div>
-                <div class="problem-theme">Theme: HealthTech / Social Impact</div>
-                <div class="problem-description">
-                    Access to quality healthcare in rural India is limited due to doctor shortages. Build an AI-driven healthcare advisory app that detects symptoms, provides first-level advice, and connects patients with doctors remotely. The system should be simple, multilingual, and capable of working with low internet connectivity.
 
+                </div>
+                <div class="problem-category">Software + AI + IoT + Cloud Computing + Data Analytics</div>
+                <div class="problem-theme">Theme: AI-Driven Precision Agriculture and Sustainable Farming</div>
+                <div class="problem-description">
+                    The Sustainable Agriculture Advisory Platform is an intelligent system that helps farmers make
+                    informed decisions to improve crop productivity and sustainability. It uses AI, IoT sensors, weather
+                    data, and soil analysis to provide personalized recommendations for irrigation, fertilization, and
+                    pest management. The platform monitors field conditions in real time and generates timely alerts to
+                    prevent crop loss. Cloud technology enables secure data storage and remote access to farming
+                    insights. Overall, the system promotes resource-efficient farming, reduces environmental impact, and
+                    supports sustainable agricultural practices.
                 </div>
             </div>
 
@@ -1756,29 +1903,44 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-04</div>
-                        <div class="problem-title">Real-life Social Challenges: Tech for Community Living</div>
+                        <div class="problem-title">Intelligent Transportation & Traffic Optimization System
+                            Category</div>
                     </div>
-                    
-                </div>
-                <div class="problem-category">Software / Hardware (depending on solution)</div>
-                <div class="problem-theme">Theme: Social Innovation</div>
-                <div class="problem-description">
-                   Communities in India face issues related to safety, education, livelihood, and healthcare. Propose a technology-driven solution (app, IoT device, or digital platform) to address at least one of these challenges. The solution should be scalable, affordable, and designed for maximum social impact.
-                 </div>
-            </div>
 
+                </div>
+                <div class="problem-category">
+                    Software + AI + IoT + Cloud Computing + Data Analytics</div>
+                <div class="problem-theme">Theme:
+                    AI-Driven Intelligent Transportation and Smart Traffic Management</div>
+                <div class="problem-description">
+                    The Intelligent Transportation & Traffic Optimization System is a smart solution designed to improve
+                    traffic flow and enhance road safety. It uses AI, IoT sensors, GPS data, and real-time traffic
+                    analytics to monitor road conditions and optimize traffic signal timings. The system detects
+                    congestion, predicts traffic patterns, and suggests alternative routes to commuters. Cloud
+                    technology enables centralized data management and real-time access for traffic authorities.
+                    Overall, the platform reduces travel time, minimizes fuel consumption, and supports the development
+                    of smart and sustainable cities.
+                </div>
+            </div>
             <div class="problem-card tilt" onclick="toggleProblem(this)">
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-05</div>
-                        <div class="problem-title">Green & Sustainable Energy Solutions</div>
+                        <div class="problem-title">Digital Tourism & Cultural Heritage Experience</div>
                     </div>
-                    
+
                 </div>
-                <div class="problem-category">Hardware + Software (Renewable Tech, IoT, AI)</div>
-                <div class="problem-theme">Theme: Sustainability / Clean Energy</div>
+                <div class="problem-category">Software + AI + AR/VR + Cloud Computing + Mobile Technology</div>
+                <div class="problem-theme">Theme:
+                    AI-Enabled Digital Tourism and Cultural Heritage Preservation</div>
                 <div class="problem-description">
-                   India’s growing energy demand requires clean, affordable, and innovative solutions. Develop a green energy prototype or system (solar, wind, hybrid, bioenergy, or energy optimization) that can be deployed in both urban and rural areas. Focus on affordability, ease of maintenance, and long-term sustainability.
+                    The Digital Tourism & Cultural Heritage Experience platform enhances travel by providing interactive
+                    and immersive experiences for tourists. It uses AI, Augmented Reality (AR), and Virtual Reality (VR)
+                    to showcase historical sites, museums, and cultural landmarks through virtual tours and smart
+                    guides. The system offers personalized travel recommendations, multilingual support, and
+                    location-based information. Cloud technology enables secure storage and easy access to tourism
+                    content from anywhere. Overall, the platform promotes cultural heritage preservation, improves
+                    tourist engagement, and supports the growth of smart tourism.
                 </div>
             </div>
 
@@ -1786,14 +1948,22 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-06</div>
-                        <div class="problem-title">MSME Digital Transformation Platform</div>
+                        <div class="problem-title"> Smart Waste Management & Environmental Monitoring
+                            Category</div>
                     </div>
-                    
+
                 </div>
-                <div class="problem-category">Software (Web + Mobile App)</div>
-                <div class="problem-theme">Theme: MSME / Entrepreneurship</div>
+                <div class="problem-category">Software + Hardware (AI, IoT, Cloud Computing, Environmental Monitoring)
+                </div>
+                <div class="problem-theme">Theme:AI-Driven Smart Waste Management and Environmental Sustainability</div>
                 <div class="problem-description">
-                    Many MSMEs lack digital tools for managing business operations. Build a low-cost, multilingual digital platform for small businesses to handle inventory, payments, and customer relations, helping them grow in the Digital India ecosystem.
+                    The Smart Waste Management & Environmental Monitoring System is designed to improve waste collection
+                    efficiency and monitor environmental conditions in real time. It uses IoT-enabled smart bins and
+                    environmental sensors to track waste levels, air quality, temperature, and humidity. AI analyzes the
+                    collected data to optimize waste collection routes and identify potential environmental risks. Cloud
+                    technology provides centralized data storage, monitoring dashboards, and instant alerts for
+                    authorities. Overall, the system promotes cleaner cities, efficient resource management, and
+                    environmental sustainability.
                 </div>
             </div>
 
@@ -1801,14 +1971,21 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-07</div>
-                        <div class="problem-title">AI-based Disaster & Emergency Management</div>
+                        <div class="problem-title">Disaster Preparedness & Emergency Response Platform
+                            Category</div>
                     </div>
-                    
+
                 </div>
-                <div class="problem-category">Software + Hardware (AI, Drones, IoT)</div>
-                <div class="problem-theme">Theme: Disaster Management / Safety</div>
+                <div class="problem-category">Software + AI + IoT + GIS + Cloud Computing</div>
+                <div class="problem-theme">Theme: AI-Enabled Disaster Management and Emergency Response</div>
                 <div class="problem-description">
-                    Floods, earthquakes, and urban fires cause huge losses in India. Create an AI-driven emergency response system that uses IoT sensors, drones, or apps to detect risks early, alert citizens, and assist authorities in effective disaster management.
+                    The Disaster Preparedness & Emergency Response Platform is a smart system designed to improve
+                    disaster prediction, preparedness, and response. It uses AI, IoT sensors, GIS mapping, and real-time
+                    weather data to detect potential disasters and assess risk levels. The platform sends instant
+                    alerts, evacuation guidance, and emergency notifications to affected communities and authorities.
+                    Cloud technology enables secure data sharing and coordination among emergency response teams.
+                    Overall, the system enhances public safety, reduces disaster impact, and supports efficient disaster
+                    management.
                 </div>
             </div>
 
@@ -1816,14 +1993,21 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-08</div>
-                        <div class="problem-title">Blockchain for Transparent Supply Chain</div>
+                        <div class="problem-title">Citizen Engagement & Public Grievance Management
+                            Category</div>
                     </div>
-                   
+
                 </div>
-                <div class="problem-category">Software (Blockchain, Cloud)</div>
-                <div class="problem-theme">Theme: Agriculture / MSME / Logistics</div>
+                <div class="problem-category">Software + AI + Cloud Computing + Data Analytics + Mobile Technology</div>
+                <div class="problem-theme">Theme: AI-Driven Digital Governance and Citizen-Centric Public Services</div>
                 <div class="problem-description">
-                    Supply chain fraud and inefficiencies affect farmers, MSMEs, and consumers. Design a blockchain-powered platform to ensure transparency, reduce middlemen, and provide fair pricing for stakeholders across agriculture, pharma, or handicrafts.
+                    The Citizen Engagement & Public Grievance Management System is a digital platform that enables
+                    citizens to submit complaints, suggestions, and service requests efficiently. It uses AI to
+                    categorize grievances, prioritize urgent cases, and provide automated responses and status updates.
+                    The platform offers real-time complaint tracking, analytics dashboards, and transparent
+                    communication between citizens and government authorities. Cloud technology ensures secure data
+                    storage and seamless accessibility across devices. Overall, the system improves public service
+                    delivery, enhances transparency, and strengthens citizen participation in governance.
                 </div>
             </div>
 
@@ -1831,14 +2015,21 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-09</div>
-                        <div class="problem-title">AI-Powered Cyber Threat Detection</div>
+                        <div class="problem-title"> Future Workforce & Career Guidance Ecosystem
+                            Category</div>
                     </div>
-                    
+
                 </div>
-                <div class="problem-category">Software (AI, ML, Security Tools)</div>
-                <div class="problem-theme">Theme: Cybersecurity / AI</div>
+                <div class="problem-category">Software + AI + Cloud Computing + Data Analytics + Machine Learning</div>
+                <div class="problem-theme">Theme: AI-Driven Career Guidance and Future Workforce Development</div>
                 <div class="problem-description">
-                    Cyberattacks are becoming more sophisticated, targeting individuals, businesses, and government systems. Build an AI/ML-based system that detects phishing, malware, and ransomware threats in real time. The solution should provide predictive analysis, alerts, and simple dashboards for both technical and non-technical users.
+                    The Future Workforce & Career Guidance Ecosystem is an intelligent platform that helps students and
+                    job seekers make informed career decisions based on their skills, interests, and industry trends. It
+                    uses AI and machine learning to recommend career paths, skill development programs, internships, and
+                    job opportunities. The platform analyzes market demand and identifies skill gaps to provide
+                    personalized learning and career guidance. Cloud technology enables secure data management and
+                    access from anywhere. Overall, the system enhances employability, supports lifelong learning, and
+                    prepares individuals for the evolving workforce.
                 </div>
             </div>
 
@@ -1846,29 +2037,38 @@
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-10</div>
-                        <div class="problem-title">Secure Digital Payments for Rural India</div>
+                        <div class="problem-title">Cyber Security & Digital Trust Framework
+                            Category</div>
                     </div>
-                    
+
                 </div>
-                <div class="problem-category">Software (FinTech, Cybersecurity, Mobile App)</div>
-                <div class="problem-theme">Theme: Cybersecurity / Financial Inclusion</div>
+                <div class="problem-category">Software + AI + Cyber Security + Cloud Computing + Blockchain</div>
+                <div class="problem-theme">Theme: AI-Driven Cyber Security and Digital Trust Management</div>
                 <div class="problem-description">
-                    With the rise of UPI and digital wallets, rural India is vulnerable to payment fraud and scams. Develop a secure, multilingual payment interface with built-in fraud detection and cyber awareness features that ensures safe digital transactions for semi-urban and rural users.
+                    The Cyber Security & Digital Trust Framework is an intelligent platform designed to protect digital
+                    systems, networks, and sensitive data from cyber threats. It uses AI to detect suspicious
+                    activities, identify security vulnerabilities, and respond to cyber attacks in real time. Blockchain
+                    technology enhances data integrity, secure authentication, and digital trust across connected
+                    systems. Cloud computing enables centralized security monitoring, threat analysis, and incident
+                    management. Overall, the framework strengthens cyber resilience, safeguards digital assets, and
+                    promotes secure and trustworthy digital services.
                 </div>
             </div>
 
-            <div class="problem-card tilt" onclick="toggleProblem(this)">
+            <!-- <div class="problem-card tilt" onclick="toggleProblem(this)">
                 <div class="problem-header">
                     <div>
                         <div class="problem-number">IV-11</div>
                         <div class="problem-title">Student Cyber Safety Platform</div>
                     </div>
-                    
+
                 </div>
                 <div class="problem-category">Software (Web/App + Awareness Tools)</div>
                 <div class="problem-theme">Theme: Cybersecurity / Education</div>
                 <div class="problem-description">
-                    Cyberbullying, online fraud, and data theft are major risks for students. Design a cyber safety platform that provides awareness, anonymous reporting, parental/student safety tools, and AI-driven detection of online risks for youth.
+                    Cyberbullying, online fraud, and data theft are major risks for students. Design a cyber safety
+                    platform that provides awareness, anonymous reporting, parental/student safety tools, and AI-driven
+                    detection of online risks for youth.
                 </div>
             </div>
 
@@ -1878,13 +2078,15 @@
                         <div class="problem-number">IV-12</div>
                         <div class="problem-title">Smart Authentication & Privacy System</div>
                     </div>
-                    
+
                 </div>
                 <div class="problem-category"> Hardware + Software (IoT, AI, Blockchain)</div>
                 <div class="problem-theme">Theme: Cybersecurity / Digital Privacy</div>
                 <div class="problem-description">
-                    Passwords are outdated and insecure. Create a next-gen authentication system (biometrics, blockchain-based ID, or multi-factor authentication) that ensures secure access to digital platforms without compromising usability.                </div>
-            </div>
+                    Passwords are outdated and insecure. Create a next-gen authentication system (biometrics,
+                    blockchain-based ID, or multi-factor authentication) that ensures secure access to digital platforms
+                    without compromising usability. </div>
+            </div> -->
         </div>
     </section>
 
@@ -1904,50 +2106,50 @@
     </section>
 
     <!-- Prizes Section -->
-  <section id="prizes" class="section">
-    <div class="container">
-      <h2 class="section-title">Prizes & rewards</h2>
-      <div class="prize-wrap reveal">
-        <div class="trophy">🏆</div>
-        <div class="pool-badge">₹2,00,000</div>
-        <div class="prize-grid">
-          <div class="prize-card">
-            <span class="medal">🥇</span>
-            <h4>Winner</h4>
-            <p style="font-weight:700; font-size:20px">₹80,000</p>
-          </div>
-          <div class="prize-card">
-            <span class="medal">🥈</span>
-            <h4>First Runner-Up</h4>
-            <p style="font-weight:700; font-size:20px">₹50,000</p>
-          </div>
-          <div class="prize-card">
-            <span class="medal">🥉</span>
-            <h4>Second Runner-Up</h4>
-            <p style="font-weight:700; font-size:20px">₹30,000</p>
-          </div>
-          <div class="prize-card">
-            <span class="medal">🏅</span>
-            <h4>Consolation Prize</h4>
-            <p style="font-weight:700; font-size:20px">₹40,000</p>
-          </div>
-        </div>
-        <!-- <p class="extras">🏅 Special Category Prizes • 🎁 Welcome Kit • 🧠 Incubation • 📜 Certificates</p> -->
+    <section id="prizes" class="section">
+        <div class="container">
+            <h2 class="section-title">Prizes & rewards</h2>
+            <div class="prize-wrap reveal">
+                <div class="trophy">🏆</div>
+                <div class="pool-badge">₹2,00,000</div>
+                <div class="prize-grid">
+                    <div class="prize-card">
+                        <span class="medal">🥇</span>
+                        <h4>Winner</h4>
+                        <p style="font-weight:700; font-size:20px">₹80,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🥈</span>
+                        <h4>First Runner-Up</h4>
+                        <p style="font-weight:700; font-size:20px">₹50,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🥉</span>
+                        <h4>Second Runner-Up</h4>
+                        <p style="font-weight:700; font-size:20px">₹30,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🏅</span>
+                        <h4>Consolation Prize</h4>
+                        <p style="font-weight:700; font-size:20px">₹40,000</p>
+                    </div>
+                </div>
+                <!-- <p class="extras">🏅 Special Category Prizes • 🎁 Welcome Kit • 🧠 Incubation • 📜 Certificates</p> -->
 
-        <h2 style="margin-bottom:20px">Organizing partners</h2>
-        <div class="partners">
-          <div class="logo-grid">
-            <div id="img1" class="logo" style="height: 150px">
-            <img src="Image/vitm.png" alt="VITM" style="height:60%;opacity:.9">
-        </div>
-          </div>
-          <!-- <div class="logo-grid">
+                <h2 style="margin-bottom:20px">Organizing partners</h2>
+                <div class="partners">
+                    <div class="logo-grid">
+                        <div id="img1" class="logo" style="height: 150px">
+                            <img src="Image/vitm.png" alt="VITM" style="height:60%;opacity:.9">
+                        </div>
+                    </div>
+                    <!-- <div class="logo-grid">
             <div class="logo" style="height: 150px">
                 <img src="Image/YI.jpg" alt="Yi" style="height:100%;opacity:.9">
             </div>
           </div> -->
-        </div>
-<!-- 
+                </div>
+                <!-- 
         <div class="sponsors">
           <h4 style="margin-bottom:6px">Sponsors</h4>
           <div class="logo-grid">
@@ -1957,72 +2159,79 @@
             <div class="logo">Sponsor Logo</div>
           </div>
         </div> -->
-      </div>
-    </div>
-  </section>
+            </div>
+        </div>
+          
+    </section>
 
- <!--Ower organizers--> 
+    <!--Ower organizers-->
     <section id="organizer" class="section fade-in">
-         <h2 class="section-title">Our Organizers</h2>
-    <div class="organizer-grid">
+        <h2 class="section-title">Our Organizers</h2>
+        <div class="organizer-grid">
 
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-               <img src="Image/Chair.jpg" alt="Chair" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-            </div>
-            <h3> Shri R.S. Rathore </h3>
-            <p>Chairman , VGI</p>
-            
-        </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/Chair.jpg" alt="Chair"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                </div>
+                <h3> Shri R.S. Rathore </h3>
+                <p>Chairman , VGI</p>
 
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                 <img src="Image/MD.jpg" alt="MD" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        </div>
-            <h3> Shri Nitin Singh Tomar </h3>    
-            <p>Managing Director , VGI</p>
-            
-        </div>
-         
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="Image/Tri.jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
             </div>
-            <h3> Smt. Garima Singh Tomar </h3>
-            
-            <p>Treasurer, VITM</p>
-        </div>
- <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="Image/AMD.jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
-            </div>
-            <h3> Dr. Sandeep Shukla </h3>
-            
-            <p>Joint Managing Director , VITM</p>
-        </div>
 
-         <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="Image/Principla.jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
-            </div>
-            <h3> Dr. Jitendra Singh Dodiya </h3>
-            
-            <p> Principal , VITM</p>
-        </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/MD.jpg" alt="MD"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                </div>
+                <h3> Shri Nitin Singh Tomar </h3>
+                <p>Managing Director , VGI</p>
 
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="Image/HOD (CSE).jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
             </div>
-            <h3> Dr. Sanmati Jain </h3>
-            
-            <p> Head Of Department - CSE , VITM</p>
-        </div>
-  <!-- <div class="organizer-card tilt">
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/Tri.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Smt. Garima Singh Tomar </h3>
+
+                <p>Treasurer, VITM</p>
+            </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/AMD.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sandeep Shukla </h3>
+
+                <p>Joint Managing Director , VITM</p>
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/Principla.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Jitendra Singh Dodiya </h3>
+
+                <p> Principal , VITM</p>
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/HOD (CSE).jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sanmati Jain </h3>
+
+                <p> Head Of Department - CSE , VITM</p>
+            </div>
+            <!-- <div class="organizer-card tilt">
             <div class="organizer-icon">
                 <img src="Image/HOD(FT).jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
                         
@@ -2031,7 +2240,7 @@
             
             <p> Head Of Department - FT , VITM</p>
         </div>   -->
-    </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
@@ -2064,7 +2273,7 @@
                     <i class="fas fa-link"></i>
                     <a href="https://forms.gle/nBespXoUn4PGBpcW9" target="_blank">Registration Form</a>
                 </div>
-                
+
                 <div class="contact-item">
                     <i class="fas fa-globe"></i>
                     <a href="https://www.vitm.edu.in/" target="_blank">Official Website</a>
@@ -2079,7 +2288,10 @@
                 </div>
             </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2873.3188309951774!2d75.794887!3d22.579549!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f992ea8f8d8b%3A0x88c25aa95f76da8f!2sVikrant%20Group%20of%20Institutions-VITM!5e1!3m2!1sen!2sin!4v1757604449876!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2873.3188309951774!2d75.794887!3d22.579549!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f992ea8f8d8b%3A0x88c25aa95f76da8f!2sVikrant%20Group%20of%20Institutions-VITM!5e1!3m2!1sen!2sin!4v1757604449876!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -2255,7 +2467,7 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        
+
                         // Animate timeline items with stagger
                         if (entry.target.classList.contains('timeline-item')) {
                             const items = document.querySelectorAll('.timeline-item');
@@ -2308,36 +2520,36 @@
 
         // Problem card toggle functionality
         function toggleProblem(card) {
-            
+
         }
 
         // Magnetic effect for buttons
         function initializeMagneticEffect() {
-      
+
         }
 
         // 3D Tilt effect
         function initializeTiltEffect() {
-   
+
         }
 
         // Advanced button ripple effect
         document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 const rect = this.getBoundingClientRect();
                 const ripple = document.createElement('span');
                 ripple.classList.add('ripple');
-                
+
                 const size = Math.max(rect.width, rect.height);
                 const x = e.clientX - rect.left - size / 2;
                 const y = e.clientY - rect.top - size / 2;
-                
+
                 ripple.style.width = ripple.style.height = size + 'px';
                 ripple.style.left = x + 'px';
                 ripple.style.top = y + 'px';
-                
+
                 this.appendChild(ripple);
-                
+
                 setTimeout(() => {
                     ripple.remove();
                 }, 600);
@@ -2350,11 +2562,11 @@
             toast.className = `toast ${type}`;
             toast.textContent = message;
             document.body.appendChild(toast);
-            
+
             setTimeout(() => {
                 toast.classList.add('show');
             }, 100);
-            
+
             setTimeout(() => {
                 toast.classList.remove('show');
                 setTimeout(() => {
@@ -2372,13 +2584,13 @@
             if (konamiCode.length > konamiSequence.length) {
                 konamiCode.shift();
             }
-            
-            if (konamiCode.length === konamiSequence.length && 
+
+            if (konamiCode.length === konamiSequence.length &&
                 konamiCode.every((code, index) => code === konamiSequence[index])) {
-                
+
                 document.body.classList.add('rainbow-mode');
                 showToast('🎉 Easter egg activated! Rainbow mode enabled!', 'success');
-                
+
                 setTimeout(() => {
                     document.body.classList.remove('rainbow-mode');
                 }, 5000);
@@ -2411,7 +2623,7 @@
                 // Close mobile menu
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
-                
+
                 // Close expanded problem cards
                 document.querySelectorAll('.problem-card.expanded').forEach(card => {
                     card.classList.remove('expanded');
@@ -2423,7 +2635,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Add any form handling logic here
             console.log('🚀 About INNOVIK 6.0: INNOVIK 6.0 – International Hackathon website loaded successfully!');
-            
+
             // Show welcome message
             setTimeout(() => {
                 showToast('Welcome to About INNOVIK 6.0: INNOVIK 6.0 – International Hackathon! 🎉', 'success');
@@ -2493,10 +2705,5 @@
         }
     </script>
 </body>
+
 </html>
-
-
-
-
-
-

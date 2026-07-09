@@ -1584,6 +1584,39 @@
             transition: transform 0.1s ease;
         }
     </style>
+    <script>
+        function updateCountdown() {
+            // Target Date: 15 September 2026
+            const targetDate = new Date("September 15, 2026 00:00:00").getTime();
+            const now = new Date().getTime();
+
+            const distance = targetDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = String(days).padStart(2, "0");
+            document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+        }
+
+        // Run immediately
+        updateCountdown();
+
+        // Update every second
+        setInterval(updateCountdown, 1000);
+    </script>
 </head>
 
 <body>
@@ -1814,7 +1847,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Final Evaluation by Jury</h3>
-                    <small>12:00 PM – 01:00 PM	</small>
+                    <small>12:00 PM – 01:00 PM </small>
                 </div>
             </div>
             <div class="timeline-item">
@@ -1833,7 +1866,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <h3>Lunch & Departure</h3>
-                    <small>02:30 PM Onwards	</small>
+                    <small>02:30 PM Onwards </small>
                 </div>
             </div>
         </div>

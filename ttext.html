@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026
-Central India's First International Hackathon
- | Vikrant Institute of Technology & Management</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+        Central India's First International Hackathon
+        | Vikrant Institute of Technology & Management</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -78,8 +81,15 @@ Central India's First International Hackathon
         }
 
         @keyframes twinkle {
-            0%, 100% { opacity: 0; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
 
         /* Floating Geometric Shapes */
@@ -135,9 +145,11 @@ Central India's First International Hackathon
                 transform: translateY(0px) rotate(0deg);
                 opacity: 0.1;
             }
+
             50% {
                 opacity: 0.3;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0.1;
@@ -178,7 +190,7 @@ Central India's First International Hackathon
             font-weight: 900;
             background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
             -webkit-background-clip: text;
-             background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             color: var(--neon-blue);
             background-clip: text;
@@ -190,6 +202,7 @@ Central India's First International Hackathon
             0% {
                 filter: drop-shadow(0 0 5px var(--neon-blue));
             }
+
             100% {
                 filter: drop-shadow(0 0 20px var(--neon-purple));
             }
@@ -273,8 +286,13 @@ Central India's First International Hackathon
         }
 
         @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(10px, 10px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(10px, 10px);
+            }
         }
 
         .hero-content {
@@ -314,8 +332,15 @@ Central India's First International Hackathon
         }
 
         @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         @keyframes fadeInUp {
@@ -323,6 +348,7 @@ Central India's First International Hackathon
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -354,8 +380,15 @@ Central India's First International Hackathon
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         .cta-buttons {
@@ -532,7 +565,7 @@ Central India's First International Hackathon
             margin-top: 0.5rem;
         }
 
-        
+
 
         /* Advanced Timeline */
         .timeline {
@@ -616,6 +649,7 @@ Central India's First International Hackathon
                 opacity: 0;
                 transform: translateX(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -627,6 +661,7 @@ Central India's First International Hackathon
                 opacity: 0;
                 transform: translateX(50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -722,7 +757,7 @@ Central India's First International Hackathon
         .problem-description {
             color: var(--text-secondary);
             line-height: 1.8;
-          /*  max-height: 0; */
+            /*  max-height: 0; */
             /*overflow: hidden; */
         }
 
@@ -779,9 +814,15 @@ Central India's First International Hackathon
             font-weight: bold;
             font-size: 1.5rem;
         }
+
         /* Prizes (big, animated) */
-    .prize-wrap{display:grid; gap:22px; place-items:center}
-    .pool-badge{
+        .prize-wrap {
+            display: grid;
+            gap: 22px;
+            place-items: center
+        }
+
+        .pool-badge {
             font-family: 'Orbitron', monospace;
             font-size: 1.8rem;
             font-weight: 900;
@@ -797,42 +838,105 @@ Central India's First International Hackathon
             0% {
                 filter: drop-shadow(0 0 5px var(--neon-blue));
             }
+
             100% {
                 filter: drop-shadow(0 0 20px var(--neon-purple));
             }
         }
-    .trophy{
-      font-size: clamp(56px, 9vw, 120px);
-      filter: drop-shadow(0 0 16px rgba(255,200,87,.35));
-      animation: glow 2.2s ease-in-out infinite;
-    }
-    @keyframes glow{
-      0%,100%{transform:translateY(0) scale(1); filter: drop-shadow(0 0 10px rgba(255,200,87,.25))}
-      50%{transform:translateY(-6px) scale(1.03); filter: drop-shadow(0 0 22px rgba(255,200,87,.45))}
-    }
-    .prize-grid{
-      display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; width:min(980px, 100%)
-    }
-    .prize-card{
-      text-align:center;padding:18px;border-radius:16px;border:1px solid var(--border);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      box-shadow: var(--shadow)
-    }
-    .prize-card .medal{font-size:38px; display:block; margin-bottom:8px; animation: bob 3s ease-in-out infinite}
-    .prize-card:nth-child(2) .medal{animation-delay:.2s}
-    .prize-card:nth-child(3) .medal{animation-delay:.4s}
-    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-    .extras{color:#d7e6ff}
 
-    .partners, .sponsors{
-      width:min(1000px, 100%); margin: 12px auto 0;
-      border:1px solid var(--border); border-radius:16px; padding:16px; background:rgba(255,255,255,.04)
-    }
-    .logo-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(140px,1fr)); gap:16px; margin-top:12px}
-    .logo{
-      height:72px;border-radius:12px; 
-      background:rgba(0,0,0,.35); display:flex;align-items:center;justify-content:center; color:#aac;
-    }
+        .trophy {
+            font-size: clamp(56px, 9vw, 120px);
+            filter: drop-shadow(0 0 16px rgba(255, 200, 87, .35));
+            animation: glow 2.2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                filter: drop-shadow(0 0 10px rgba(255, 200, 87, .25))
+            }
+
+            50% {
+                transform: translateY(-6px) scale(1.03);
+                filter: drop-shadow(0 0 22px rgba(255, 200, 87, .45))
+            }
+        }
+
+        .prize-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            width: min(980px, 100%)
+        }
+
+        .prize-card {
+            text-align: center;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+            box-shadow: var(--shadow)
+        }
+
+        .prize-card .medal {
+            font-size: 38px;
+            display: block;
+            margin-bottom: 8px;
+            animation: bob 3s ease-in-out infinite
+        }
+
+        .prize-card:nth-child(2) .medal {
+            animation-delay: .2s
+        }
+
+        .prize-card:nth-child(3) .medal {
+            animation-delay: .4s
+        }
+
+        @keyframes bob {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-6px)
+            }
+        }
+
+        .extras {
+            color: #d7e6ff
+        }
+
+        .partners,
+        .sponsors {
+            width: min(1000px, 100%);
+            margin: 12px auto 0;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            background: rgba(255, 255, 255, .04)
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-top: 12px
+        }
+
+        .logo {
+            height: 72px;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, .35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aac;
+        }
 
         /* owr Oraganizer*/
         .organizer-grid {
@@ -887,8 +991,15 @@ Central India's First International Hackathon
         }
 
         @keyframes iconFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .organizer-card h3 {
@@ -946,7 +1057,8 @@ Central India's First International Hackathon
             width: 25px;
         }
 
-        .contact-item span, .contact-item a {
+        .contact-item span,
+        .contact-item a {
             color: var(--text-secondary);
             text-decoration: none;
         }
@@ -1151,12 +1263,15 @@ Central India's First International Hackathon
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.7;
             }
+
             90% {
                 opacity: 0.7;
             }
+
             100% {
                 transform: translateY(-100px) rotate(360deg);
                 opacity: 0;
@@ -1170,18 +1285,25 @@ Central India's First International Hackathon
         }
 
         @keyframes glitch {
-            0%, 90%, 100% {
+
+            0%,
+            90%,
+            100% {
                 transform: translate(0);
             }
+
             20% {
                 transform: translate(-2px, 2px);
             }
+
             40% {
                 transform: translate(-2px, -2px);
             }
+
             60% {
                 transform: translate(2px, 2px);
             }
+
             80% {
                 transform: translate(2px, -2px);
             }
@@ -1192,7 +1314,7 @@ Central India's First International Hackathon
             .hero h1 {
                 font-size: 4rem;
             }
-            
+
             .section-title {
                 font-size: 3rem;
             }
@@ -1382,8 +1504,13 @@ Central India's First International Hackathon
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         /* Easter Egg Styles */
@@ -1392,8 +1519,13 @@ Central India's First International Hackathon
         }
 
         @keyframes rainbow {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
         }
 
         /* Ripple Effect */
@@ -1453,6 +1585,7 @@ Central India's First International Hackathon
         }
     </style>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
@@ -1464,10 +1597,10 @@ Central India's First International Hackathon
 
     <!-- Animated Background -->
     <div class="animated-bg"></div>
-    
+
     <!-- Stars Background -->
     <div class="stars" id="stars"></div>
-    
+
     <!-- Geometric Shapes -->
     <div class="geometric-bg">
         <div class="shape"></div>
@@ -1502,15 +1635,15 @@ Central India's First International Hackathon
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-          <!-- <div class="hero-badge fade-in">🚀 Registration Open Now</div> -->
+            <!-- <div class="hero-badge fade-in">🚀 Registration Open Now</div> -->
             <!-- <img src="https://i.ibb.co/3YdkRd2j/9a16bdc968115f58668f35dd4bf26158.jpg" width="50%"/> -->
             <h1 class="fade-in">INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026
-Central India's First International Hackathon
-</h1>
+                Central India's First International Hackathon
+            </h1>
             <p class="tagline fade-in">CODE • CREATE • CONQUER</p>
             <p class="subtitle fade-in">Vikrant Institute of Technology & Management, Indore</p>
             <p class="date fade-in">4th - 5th October 2025</p>
-            
+
             <!-- Countdown Timer -->
             <div class="countdown-container fade-in">
                 <div class="countdown-item">
@@ -1532,7 +1665,8 @@ Central India's First International Hackathon
             </div>
 
             <div class="cta-buttons">
-                <a href="https://forms.gle/4t3kMc6BMwiX9joW6" target="_blank" class="btn btn-primary magnetic">Register Now</a>
+                <a href="https://forms.gle/4t3kMc6BMwiX9joW6" target="_blank" class="btn btn-primary magnetic">Register
+                    Now</a>
                 <a href="#about" class="btn btn-secondary magnetic">Learn More</a>
             </div>
         </div>
@@ -1543,10 +1677,15 @@ Central India's First International Hackathon
         <h2 class="section-title">About INNOVIK 5.0</h2>
         <div class="about-content">
             <p>Welcome to INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026
-Central India's First International Hackathon
-, where innovation meets technology! Join us for an extraordinary 36-hour coding marathon that brings together the brightest minds to solve real-world challenges through cutting-edge technology solutions.</p>
-            
-            <p>This premier hackathon focuses on three critical themes: <strong>Healthcare Innovation</strong>, <strong>Sustainable Technology</strong>, and <strong>Cybersecurity Solutions</strong>. Participants will have the opportunity to work on 12 carefully curated problem statements that address pressing societal needs.</p>
+                Central India's First International Hackathon
+                , where innovation meets technology! Join us for an extraordinary 36-hour coding marathon that brings
+                together the brightest minds to solve real-world challenges through cutting-edge technology solutions.
+            </p>
+
+            <p>This premier hackathon focuses on three critical themes: <strong>Healthcare Innovation</strong>,
+                <strong>Sustainable Technology</strong>, and <strong>Cybersecurity Solutions</strong>. Participants will
+                have the opportunity to work on 12 carefully curated problem statements that address pressing societal
+                needs.</p>
         </div>
 
         <div class="about-stats">
@@ -1688,7 +1827,7 @@ Central India's First International Hackathon
             </div>
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <h3>Valedictort & Prize Distribution Ceremony</h3>                
+                    <h3>Valedictort & Prize Distribution Ceremony</h3>
                     <small>1:30 - 2:30 PM</small>
                 </div>
             </div>
@@ -1710,7 +1849,10 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (AI/ML, Computer Vision)</div>
                 <div class="problem-theme">Theme: Healthcare Innovation</div>
                 <div class="problem-description">
-                    Develop an AI-powered diagnostic tool that can analyze medical images (X-rays, CT scans, MRIs) to detect diseases like pneumonia, fractures, or tumors. The solution should provide accurate results with confidence scores and be accessible to healthcare professionals in remote areas with limited specialist availability.
+                    Develop an AI-powered diagnostic tool that can analyze medical images (X-rays, CT scans, MRIs) to
+                    detect diseases like pneumonia, fractures, or tumors. The solution should provide accurate results
+                    with confidence scores and be accessible to healthcare professionals in remote areas with limited
+                    specialist availability.
                 </div>
             </div>
 
@@ -1725,7 +1867,10 @@ Central India's First International Hackathon
                 <div class="problem-category">Hardware + Software (IoT, Mobile App)</div>
                 <div class="problem-theme">Theme: Healthcare Innovation</div>
                 <div class="problem-description">
-                    Create a comprehensive medication management system that includes smart pill dispensers, mobile app reminders, dosage tracking, and integration with healthcare providers. The system should help elderly patients and those with chronic conditions maintain proper medication schedules and prevent adverse drug interactions.
+                    Create a comprehensive medication management system that includes smart pill dispensers, mobile app
+                    reminders, dosage tracking, and integration with healthcare providers. The system should help
+                    elderly patients and those with chronic conditions maintain proper medication schedules and prevent
+                    adverse drug interactions.
                 </div>
             </div>
 
@@ -1740,7 +1885,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (Web/Mobile Platform)</div>
                 <div class="problem-theme">Theme: Healthcare Innovation</div>
                 <div class="problem-description">
-                    Design a comprehensive telemedicine platform that works efficiently on low-bandwidth connections, supports multiple regional languages, includes basic diagnostic tools, and enables secure communication between patients in rural areas and healthcare professionals in urban centers.
+                    Design a comprehensive telemedicine platform that works efficiently on low-bandwidth connections,
+                    supports multiple regional languages, includes basic diagnostic tools, and enables secure
+                    communication between patients in rural areas and healthcare professionals in urban centers.
                 </div>
             </div>
 
@@ -1755,7 +1902,10 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (AI Chatbot, Mobile App)</div>
                 <div class="problem-theme">Theme: Healthcare Innovation</div>
                 <div class="problem-description">
-                    Develop an AI-powered mental health support platform that provides 24/7 emotional support, mood tracking, personalized therapy recommendations, crisis intervention, and connects users with professional counselors when needed. The system should maintain strict privacy and confidentiality standards.
+                    Develop an AI-powered mental health support platform that provides 24/7 emotional support, mood
+                    tracking, personalized therapy recommendations, crisis intervention, and connects users with
+                    professional counselors when needed. The system should maintain strict privacy and confidentiality
+                    standards.
                 </div>
             </div>
 
@@ -1770,7 +1920,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Hardware + Software (IoT, AI, Blockchain)</div>
                 <div class="problem-theme">Theme: Sustainable Technology</div>
                 <div class="problem-description">
-                    Create an intelligent energy grid management system that optimizes renewable energy distribution, predicts energy demand, manages load balancing, and enables peer-to-peer energy trading between households with solar panels or other renewable energy sources.
+                    Create an intelligent energy grid management system that optimizes renewable energy distribution,
+                    predicts energy demand, manages load balancing, and enables peer-to-peer energy trading between
+                    households with solar panels or other renewable energy sources.
                 </div>
             </div>
 
@@ -1785,7 +1937,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Hardware + Software (IoT, Route Optimization)</div>
                 <div class="problem-theme">Theme: Sustainable Technology</div>
                 <div class="problem-description">
-                    Develop a smart waste management system that uses IoT sensors to monitor bin fill levels, optimizes collection routes, categorizes waste types, tracks recycling rates, and provides analytics to municipal authorities for better resource allocation and environmental impact reduction.
+                    Develop a smart waste management system that uses IoT sensors to monitor bin fill levels, optimizes
+                    collection routes, categorizes waste types, tracks recycling rates, and provides analytics to
+                    municipal authorities for better resource allocation and environmental impact reduction.
                 </div>
             </div>
 
@@ -1800,7 +1954,10 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (Mobile App, Data Analytics)</div>
                 <div class="problem-theme">Theme: Sustainable Technology</div>
                 <div class="problem-description">
-                    Build a comprehensive carbon footprint tracking application that monitors individual and organizational carbon emissions from transportation, energy usage, food consumption, and lifestyle choices. Include gamification elements, reduction suggestions, and carbon offset marketplace integration.
+                    Build a comprehensive carbon footprint tracking application that monitors individual and
+                    organizational carbon emissions from transportation, energy usage, food consumption, and lifestyle
+                    choices. Include gamification elements, reduction suggestions, and carbon offset marketplace
+                    integration.
                 </div>
             </div>
 
@@ -1815,7 +1972,10 @@ Central India's First International Hackathon
                 <div class="problem-category">Hardware + Software (IoT, AI, Drones)</div>
                 <div class="problem-theme">Theme: Sustainable Technology</div>
                 <div class="problem-description">
-                    Create an intelligent farming system that uses IoT sensors, drones, and AI to monitor soil conditions, weather patterns, crop health, and automate irrigation. The system should optimize water usage, predict harvest times, and provide actionable insights to farmers for sustainable agriculture practices.
+                    Create an intelligent farming system that uses IoT sensors, drones, and AI to monitor soil
+                    conditions, weather patterns, crop health, and automate irrigation. The system should optimize water
+                    usage, predict harvest times, and provide actionable insights to farmers for sustainable agriculture
+                    practices.
                 </div>
             </div>
 
@@ -1830,7 +1990,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (AI/ML, Network Security)</div>
                 <div class="problem-theme">Theme: Cybersecurity Solutions</div>
                 <div class="problem-description">
-                    Develop an AI-powered cybersecurity system that can detect and prevent advanced persistent threats, zero-day attacks, and insider threats in real-time. The system should use machine learning to adapt to new attack patterns and provide automated incident response capabilities.
+                    Develop an AI-powered cybersecurity system that can detect and prevent advanced persistent threats,
+                    zero-day attacks, and insider threats in real-time. The system should use machine learning to adapt
+                    to new attack patterns and provide automated incident response capabilities.
                 </div>
             </div>
 
@@ -1845,7 +2007,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (FinTech, Blockchain, Mobile)</div>
                 <div class="problem-theme">Theme: Cybersecurity Solutions</div>
                 <div class="problem-description">
-                    Build a secure digital payment platform with advanced fraud detection, multi-factor authentication, and blockchain-based transaction verification. The system should be user-friendly for rural populations while maintaining bank-level security standards and supporting offline transactions.
+                    Build a secure digital payment platform with advanced fraud detection, multi-factor authentication,
+                    and blockchain-based transaction verification. The system should be user-friendly for rural
+                    populations while maintaining bank-level security standards and supporting offline transactions.
                 </div>
             </div>
 
@@ -1860,7 +2024,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Software (Web/Mobile, AI Monitoring)</div>
                 <div class="problem-theme">Theme: Cybersecurity Solutions</div>
                 <div class="problem-description">
-                    Create a comprehensive cyber safety platform for students that includes cyberbullying detection, safe browsing tools, digital literacy education, parental controls, anonymous reporting systems, and AI-powered content filtering to protect young users from online threats.
+                    Create a comprehensive cyber safety platform for students that includes cyberbullying detection,
+                    safe browsing tools, digital literacy education, parental controls, anonymous reporting systems, and
+                    AI-powered content filtering to protect young users from online threats.
                 </div>
             </div>
 
@@ -1875,7 +2041,9 @@ Central India's First International Hackathon
                 <div class="problem-category">Hardware + Software (Biometrics, Blockchain)</div>
                 <div class="problem-theme">Theme: Cybersecurity Solutions</div>
                 <div class="problem-description">
-                    Design a revolutionary authentication system that combines multiple biometric factors, behavioral analysis, and blockchain-based identity verification. The system should be passwordless, highly secure, privacy-preserving, and accessible across various devices and platforms.
+                    Design a revolutionary authentication system that combines multiple biometric factors, behavioral
+                    analysis, and blockchain-based identity verification. The system should be passwordless, highly
+                    secure, privacy-preserving, and accessible across various devices and platforms.
                 </div>
             </div>
         </div>
@@ -1897,40 +2065,41 @@ Central India's First International Hackathon
     </section>
 
     <!-- Prizes Section -->
-  <section id="prizes" class="section">
-    <div class="container">
-      <h2 class="section-title">Prizes & rewards</h2>
-      <div class="prize-wrap reveal">
-        <div class="trophy">🏆</div>
-        <div class="pool-badge">₹1,00,000+ Prize Pool</div>
-        <div class="prize-grid">
-          <div class="prize-card">
-            <span class="medal">🥇</span>
-            <h4>1st Prize</h4>
-            <p style="font-weight:700; font-size:20px">₹40,000</p>
-          </div>
-          <div class="prize-card">
-            <span class="medal">🥈</span>
-            <h4>2nd Prize</h4>
-            <p style="font-weight:700; font-size:20px">₹25,000</p>
-          </div>
-          <div class="prize-card">
-            <span class="medal">🥉</span>
-            <h4>3rd Prize</h4>
-            <p style="font-weight:700; font-size:20px">₹15,000</p>
-          </div>
-        </div>
-        <p class="extras">🏅 Special Category Prizes • 🎁 Welcome Kit • 🧠 Incubation • 📜 Certificates</p>
+    <section id="prizes" class="section">
+        <div class="container">
+            <h2 class="section-title">Prizes & rewards</h2>
+            <div class="prize-wrap reveal">
+                <div class="trophy">🏆</div>
+                <div class="pool-badge">₹1,00,000+ Prize Pool</div>
+                <div class="prize-grid">
+                    <div class="prize-card">
+                        <span class="medal">🥇</span>
+                        <h4>1st Prize</h4>
+                        <p style="font-weight:700; font-size:20px">₹40,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🥈</span>
+                        <h4>2nd Prize</h4>
+                        <p style="font-weight:700; font-size:20px">₹25,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🥉</span>
+                        <h4>3rd Prize</h4>
+                        <p style="font-weight:700; font-size:20px">₹15,000</p>
+                    </div>
+                </div>
+                <p class="extras">🏅 Special Category Prizes • 🎁 Welcome Kit • 🧠 Incubation • 📜 Certificates</p>
 
-        <div class="partners">
-          <h4 style="margin-bottom:6px">Organizing partners</h4>
-          <div class="logo-grid">
-            <div id="img1" class="logo"><img src="image/vitm.png" alt="VITM" style="height:60%;opacity:.9"></div>
-            <div class="logo"><img src="image/YI.jpg" alt="Yi" style="height:100%;opacity:.9"></div>
-            <!-- <div class="logo">+ Add more</div> -->
-          </div>
-        </div>
-<!-- 
+                <div class="partners">
+                    <h4 style="margin-bottom:6px">Organizing partners</h4>
+                    <div class="logo-grid">
+                        <div id="img1" class="logo"><img src="image/vitm.png" alt="VITM" style="height:60%;opacity:.9">
+                        </div>
+                        <div class="logo"><img src="image/YI.jpg" alt="Yi" style="height:100%;opacity:.9"></div>
+                        <!-- <div class="logo">+ Add more</div> -->
+                    </div>
+                </div>
+                <!-- 
         <div class="sponsors">
           <h4 style="margin-bottom:6px">Sponsors</h4>
           <div class="logo-grid">
@@ -1940,81 +2109,89 @@ Central India's First International Hackathon
             <div class="logo">Sponsor Logo</div>
           </div>
         </div> -->
-      </div>
-    </div>
-  </section>
+            </div>
+        </div>
+          
+    </section>
 
- <!--Ower organizers--> 
+    <!--Ower organizers-->
     <section id="organizer" class="section fade-in">
-         <h2 class="section-title">Our Organizers</h2>
-    <div class="organizer-grid">
+        <h2 class="section-title">Our Organizers</h2>
+        <div class="organizer-grid">
 
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-               <img src="image/Chair.jpg" alt="Chair" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-            </div>
-            <h3> Shri R.S. Rathore </h3>
-            <p>Chairman , VGI</p>
-            
-        </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/Chair.jpg" alt="Chair"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                </div>
+                <h3> Shri R.S. Rathore </h3>
+                <p>Chairman , VGI</p>
 
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                 <img src="image/MD.jpg" alt="MD" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        </div>
-            <h3> Shri Nitin Singh Tomar </h3>    
-            <p>Managing Director , VGI</p>
-            
-        </div>
-         
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="image/Tri.jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
             </div>
-            <h3> Smt. Garima Singh Tomar </h3>
-            
-            <p>Treasurer, VITM</p>
-        </div>
- <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="image/AMD.jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
-            </div>
-            <h3> Dr. Sandeep Shukla </h3>
-            
-            <p>Joint Managing Director , VITM</p>
-        </div>
 
-         <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="image/Principla.jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
-            </div>
-            <h3> Dr. Jitendra Singh Dodiya </h3>
-            
-            <p> Principal , VITM</p>
-        </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/MD.jpg" alt="MD"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                </div>
+                <h3> Shri Nitin Singh Tomar </h3>
+                <p>Managing Director , VGI</p>
 
-        <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="image/HOD (CSE).jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
             </div>
-            <h3> Dr. Sanmati Jain </h3>
-            
-            <p> Head Of Department - CSE , VITM</p>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/Tri.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Smt. Garima Singh Tomar </h3>
+
+                <p>Treasurer, VITM</p>
+            </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/AMD.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sandeep Shukla </h3>
+
+                <p>Joint Managing Director , VITM</p>
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/Principla.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Jitendra Singh Dodiya </h3>
+
+                <p> Principal , VITM</p>
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/HOD (CSE).jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sanmati Jain </h3>
+
+                <p> Head Of Department - CSE , VITM</p>
+            </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="image/HOD(FT).jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sandeep Yadav </h3>
+
+                <p> Head Of Department - FT , VITM</p>
+            </div>
         </div>
-  <div class="organizer-card tilt">
-            <div class="organizer-icon">
-                <img src="image/HOD(FT).jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
-                        
-            </div>
-            <h3> Dr. Sandeep Yadav  </h3>
-            
-            <p> Head Of Department - FT , VITM</p>
-        </div>  
-    </div>
     </section>
 
     <!-- Contact Section -->
@@ -2061,7 +2238,10 @@ Central India's First International Hackathon
                 </div>
             </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2873.3224276083506!2d75.79123007398529!3d22.579376532724446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f992ea8f8d8b%3A0x88c25aa95f76da8f!2sVikrant%20Group%20of%20Institutions-VITM!5e1!3m2!1sen!2sin!4v1757532246224!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2873.3224276083506!2d75.79123007398529!3d22.579376532724446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f992ea8f8d8b%3A0x88c25aa95f76da8f!2sVikrant%20Group%20of%20Institutions-VITM!5e1!3m2!1sen!2sin!4v1757532246224!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
@@ -2237,7 +2417,7 @@ Central India's First International Hackathon
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        
+
                         // Animate timeline items with stagger
                         if (entry.target.classList.contains('timeline-item')) {
                             const items = document.querySelectorAll('.timeline-item');
@@ -2290,36 +2470,36 @@ Central India's First International Hackathon
 
         // Problem card toggle functionality
         function toggleProblem(card) {
-            
+
         }
 
         // Magnetic effect for buttons
         function initializeMagneticEffect() {
-      
+
         }
 
         // 3D Tilt effect
         function initializeTiltEffect() {
-   
+
         }
 
         // Advanced button ripple effect
         document.querySelectorAll('.btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 const rect = this.getBoundingClientRect();
                 const ripple = document.createElement('span');
                 ripple.classList.add('ripple');
-                
+
                 const size = Math.max(rect.width, rect.height);
                 const x = e.clientX - rect.left - size / 2;
                 const y = e.clientY - rect.top - size / 2;
-                
+
                 ripple.style.width = ripple.style.height = size + 'px';
                 ripple.style.left = x + 'px';
                 ripple.style.top = y + 'px';
-                
+
                 this.appendChild(ripple);
-                
+
                 setTimeout(() => {
                     ripple.remove();
                 }, 600);
@@ -2332,11 +2512,11 @@ Central India's First International Hackathon
             toast.className = `toast ${type}`;
             toast.textContent = message;
             document.body.appendChild(toast);
-            
+
             setTimeout(() => {
                 toast.classList.add('show');
             }, 100);
-            
+
             setTimeout(() => {
                 toast.classList.remove('show');
                 setTimeout(() => {
@@ -2354,13 +2534,13 @@ Central India's First International Hackathon
             if (konamiCode.length > konamiSequence.length) {
                 konamiCode.shift();
             }
-            
-            if (konamiCode.length === konamiSequence.length && 
+
+            if (konamiCode.length === konamiSequence.length &&
                 konamiCode.every((code, index) => code === konamiSequence[index])) {
-                
+
                 document.body.classList.add('rainbow-mode');
                 showToast('🎉 Easter egg activated! Rainbow mode enabled!', 'success');
-                
+
                 setTimeout(() => {
                     document.body.classList.remove('rainbow-mode');
                 }, 5000);
@@ -2393,7 +2573,7 @@ Central India's First International Hackathon
                 // Close mobile menu
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
-                
+
                 // Close expanded problem cards
                 document.querySelectorAll('.problem-card.expanded').forEach(card => {
                     card.classList.remove('expanded');
@@ -2405,7 +2585,7 @@ Central India's First International Hackathon
         document.addEventListener('DOMContentLoaded', () => {
             // Add any form handling logic here
             console.log('🚀 INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026 website loaded successfully!');
-            
+
             // Show welcome message
             setTimeout(() => {
                 showToast('Welcome to INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026! 🎉', 'success');
@@ -2475,4 +2655,5 @@ Central India's First International Hackathon
         }
     </script>
 </body>
+
 </html>

@@ -294,14 +294,147 @@
                 transform: translate(10px, 10px);
             }
         }
-
+/* ========================================= */
         .hero-content {
-            max-width: 1000px;
+            /* max-width: 1000px;
             padding: 0 2rem;
             z-index: 2;
-            position: relative;
+            position: relative; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 80px;
+            min-height: 85vh;
         }
 
+        .hero-left {
+
+            flex: 1;
+        }
+
+        .hero-right {
+
+            width: 300px;
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+        .hero-left h1 {
+
+            font-size: 72px;
+
+            line-height: 1.1;
+
+            font-weight: 800;
+
+            color: #fff;
+        }
+
+        .hero-left h1 span {
+
+            display: block;
+
+            color: #8b5cf6;
+        }
+
+        .hero-left p {
+
+            margin: 30px 0;
+
+            font-size: 28px;
+
+            color: #cbd5e1;
+        }
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 20px;
+        }
+
+        .btn {
+
+            padding: 18px 38px;
+
+            border-radius: 15px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .3s;
+        }
+
+        .btn-primary {
+
+            background: #2563eb;
+
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+
+            background: #1d4ed8;
+        }
+
+        .btn-outline {
+
+            border: 2px solid #06b6d4;
+
+            color: #06b6d4;
+        }
+        .junior-card{
+
+    width:260px;
+
+    height:360px;
+
+    border-radius:35px;
+
+    background:linear-gradient(180deg,#a855f7,#22d3ee);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    box-shadow:0 30px 60px rgba(34,211,238,.25);
+
+    transition:.35s;
+}
+
+.junior-card:hover{
+
+    transform:translateY(-10px) scale(1.03);
+}
+
+.junior-card h3{
+
+    font-size:34px;
+}
+
+.junior-card h2{
+
+    font-size:46px;
+
+    margin:10px 0;
+}
+
+.junior-card span{
+
+    font-size:28px;
+}
+/* ================================================ */
         .hero-badge {
             display: inline-block;
             background: var(--glass-bg);
@@ -1637,16 +1770,50 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <!-- <div class="hero-badge fade-in">🚀 Registration Open Now</div> -->
-            <!-- <img src="https://i.ibb.co/3YdkRd2j/9a16bdc968115f58668f35dd4bf26158.jpg" width="50%"/> -->
-            <!-- <div class="cta-buttons">
-                <a href="./junior_hackathon_2026.html" target="_blank" class="btn btn-primary magnetic">INNOVIK JUNIOR HACKATHON 2026
-                    Future Innovators Challenge
-                    Exclusively for School Students (Class X to XII)
-                </a>
-            </div> -->
+            <div class="hero-content">
+
+                <div class="hero-left">
+
+                    <h1>
+                        INNOVIK 6.0 – INTERNATIONAL
+                        <span>HACKATHON 2026</span>
+                    </h1>
+
+                    <p>
+                        Central India's First International Hackathon
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#" class="btn btn-primary">
+                            Register Now
+                        </a>
+
+                        <a href="#problems" class="btn btn-outline">
+                            Problem Statements
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-right">
+
+                    <a href="./junior_hackathon_2026.html" class="junior-card">
+
+                        <h3>Junior</h3>
+
+                        <h2>Hackathon</h2>
+
+                        <span>2026</span>
+
+                    </a>
+
+                </div>
+
+            </div>
             <div>
-                <div style="display: flex;">
+                <!-- <div style="display: flex;">
                     <h1 class="fade-in">
                         INNOVIK 6.0 – INTERNATIONAL HACKATHON 2026
                         Central India's First International Hackathon
@@ -1655,7 +1822,7 @@
                         <a href="./junior_hackathon_2026.html" target="_blank" class="btn btn-primary magnetic">Junior
                             Hackathon</a>
                     </div>
-                </div>
+                </div> -->
                 <p class="tagline fade-in">CODE • CREATE • CONQUER</p>
                 <p class="subtitle fade-in">Vikrant Institute of Technology & Management, Indore</p>
                 <p class="date fade-in">15–16 September 2026</p>

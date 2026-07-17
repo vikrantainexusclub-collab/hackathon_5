@@ -1,0 +1,2766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOVIK JUNIOR HACKATHON 2026
+    </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --tertiary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --neon-blue: #00f5ff;
+            --neon-purple: #bf00ff;
+            --neon-pink: #ff0080;
+            --neon-green: #39ff14;
+            --neon-orange: #ff6600;
+            --dark-bg: #0a0a0a;
+            --darker-bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-accent: #e0e0e0;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1); */
+            --bg: #07111F;
+            --section: #0F172A;
+            --card: #18263A;
+
+            --primary: #2563EB;
+            --secondary: #06B6D4;
+            --accent: #F59E0B;
+
+            --success: #22C55E;
+            --white: #ffffff;
+            --text: #CBD5E1;
+
+            --border: rgba(255, 255, 255, .08);
+
+            --shadow: 0 15px 40px rgba(0, 0, 0, .25);
+
+            --gradient: linear-gradient(135deg, #2563EB, #06B6D4);
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+            width: 100% !important;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+            width: 100% !important;
+        }
+
+        /* Advanced Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Floating Geometric Shapes */
+        .geometric-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--neon-blue);
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--neon-purple);
+            top: 60%;
+            right: 15%;
+            animation-delay: -5s;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--neon-pink);
+            top: 40%;
+            left: 70%;
+            animation-delay: -10s;
+            transform: rotate(45deg);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0.1;
+            }
+        }
+
+        /* Advanced Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(30px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .navbar.scrolled {
+            background: rgba(5, 5, 5, 0.95);
+            padding: 0.5rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: var(--neon-blue);
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            animation: logoGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% {
+                filter: drop-shadow(0 0 5px var(--neon-blue));
+            }
+
+            100% {
+                filter: drop-shadow(0 0 20px var(--neon-purple));
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-primary);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hero Section - Ultra Premium */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
+            padding-top: 90px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(10px, 10px);
+            }
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            padding: 0 2rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--neon-green));
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease-in-out infinite, fadeInUp 1s ease 0.4s both;
+            text-shadow: 0 0 50px rgba(0, 245, 255, 0.5);
+            line-height: 1.1;
+            margin-top: 15px;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .tagline {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--text-accent);
+            animation: fadeInUp 1s ease 0.6s both;
+            letter-spacing: 2px;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .hero .date {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 1s both, pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease 1.2s both;
+        }
+
+        .btn {
+            padding: 1.2rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 245, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: var(--neon-blue);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 245, 255, 0.4);
+        }
+
+        /* Premium Glassmorphism Cards */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            border-color: var(--neon-blue);
+            box-shadow: 0 30px 60px rgba(0, 245, 255, 0.15);
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 2;
+            color: var(--text-secondary);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--neon-blue);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+
+
+        /* Advanced Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(180deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 20px 50px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            animation: slideInLeft 0.6s ease forwards;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            animation: slideInRight 0.6s ease forwards;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -13px;
+            background: var(--neon-blue);
+            border: 4px solid var(--dark-bg);
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -13px;
+        }
+
+        .timeline-content {
+            padding: 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content h3 {
+            color: var(--neon-blue);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content small {
+            color: var(--neon-purple);
+            font-weight: 600;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Problem Statements - Premium Design */
+        .problems-grid {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .problem-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.05), transparent);
+            transition: left 0.6s;
+        }
+
+        .problem-card:hover::before {
+            left: 100%;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--neon-blue);
+            box-shadow: 0 25px 50px rgba(0, 245, 255, 0.15);
+        }
+
+        .problem-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .problem-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--neon-blue);
+            line-height: 1.3;
+        }
+
+        .problem-number {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: white;
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            min-width: 50px;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .problem-category {
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .problem-theme {
+            color: var(--neon-green);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .problem-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            /*  max-height: 0; */
+            /*overflow: hidden; */
+        }
+
+        .problem-card.expanded .problem-description {
+            max-height: 600px;
+            margin-top: 1rem;
+        }
+
+        .expand-icon {
+            transition: transform 0.3s ease;
+            color: var(--neon-blue);
+            font-size: 1.2rem;
+        }
+
+        .problem-card.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Rules Section */
+        .rules-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .rules-list {
+            list-style: none;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .rules-list li {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            position: relative;
+            padding-left: 4rem;
+            transition: all 0.3s ease;
+        }
+
+        .rules-list li:hover {
+            transform: translateX(10px);
+            border-color: var(--neon-blue);
+        }
+
+        .rules-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--neon-green);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* Prizes (big, animated) */
+        .prize-wrap {
+            display: grid;
+            gap: 22px;
+            place-items: center
+        }
+
+        .pool-badge {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 245, 255, 0.5);
+            animation: logoGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% {
+                filter: drop-shadow(0 0 5px var(--neon-blue));
+            }
+
+            100% {
+                filter: drop-shadow(0 0 20px var(--neon-purple));
+            }
+        }
+
+        .trophy {
+            font-size: clamp(56px, 9vw, 120px);
+            filter: drop-shadow(0 0 16px rgba(255, 200, 87, .35));
+            animation: glow 2.2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+                filter: drop-shadow(0 0 10px rgba(255, 200, 87, .25))
+            }
+
+            50% {
+                transform: translateY(-6px) scale(1.03);
+                filter: drop-shadow(0 0 22px rgba(255, 200, 87, .45))
+            }
+        }
+
+        .prize-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            width: min(980px, 100%)
+        }
+
+        .prize-card {
+            text-align: center;
+            padding: 18px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
+            box-shadow: var(--shadow)
+        }
+
+        .prize-card .medal {
+            font-size: 38px;
+            display: block;
+            margin-bottom: 8px;
+            animation: bob 3s ease-in-out infinite
+        }
+
+        .prize-card:nth-child(2) .medal {
+            animation-delay: .2s
+        }
+
+        .prize-card:nth-child(3) .medal {
+            animation-delay: .4s
+        }
+
+        @keyframes bob {
+
+            0%,
+            100% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-6px)
+            }
+        }
+
+        .extras {
+            color: #d7e6ff;
+            margin-bottom: 20px;
+        }
+
+        .partners,
+        .sponsors {
+            display: flex;
+            gap: 20px;
+        }
+
+        .logo-grid {
+            display: grid;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+            background: rgba(255, 255, 255, .04)
+        }
+
+        .logo {
+            height: 72px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aac;
+        }
+
+        /* owr Oraganizer*/
+        .organizer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .organizer-card {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .organizer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .organizer-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .organizer-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: var(--neon-blue);
+            box-shadow: 0 30px 60px rgba(0, 245, 255, 0.2);
+        }
+
+        .organizer-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple), var(--neon-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .organizer-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--neon-blue);
+        }
+
+        .organizer-card p {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 3rem;
+        }
+
+        .contact-info h3 {
+            color: var(--neon-blue);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 245, 255, 0.05);
+            transform: translateX(10px);
+        }
+
+        .contact-item i {
+            color: var(--neon-blue);
+            font-size: 1.3rem;
+            width: 25px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--neon-blue);
+        }
+
+        .map-container {
+            border-radius: 25px;
+            overflow: hidden;
+            height: 400px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--darker-bg);
+            backdrop-filter: blur(30px);
+            border-top: 1px solid var(--glass-border);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            padding: 1rem;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+        }
+
+        .social-links a:hover {
+            color: var(--neon-blue);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Advanced Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: white;
+            z-index: 9999;
+            transition: width 0.1s ease;
+            box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .fab.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.5);
+        }
+
+        /* Countdown Timer */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            min-width: 120px;
+            transition: all 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--neon-blue);
+        }
+
+        .countdown-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--neon-blue);
+            display: block;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .countdown-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+
+        /* Advanced Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Particle System */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--neon-blue);
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: particleFloat 15s infinite linear;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.7;
+            }
+
+            90% {
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Glitch Effect for Special Elements */
+        .glitch {
+            position: relative;
+            animation: glitch 2s infinite;
+        }
+
+        @keyframes glitch {
+
+            0%,
+            90%,
+            100% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(30px);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                border-top: 1px solid var(--glass-border);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(9px) rotate(45deg);
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero .date {
+                font-size: 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section {
+                padding: 4rem 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 18px;
+            }
+
+            .timeline-item:nth-child(even) {
+                left: 0%;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .countdown-container {
+                gap: 1rem;
+            }
+
+            .countdown-item {
+                min-width: 100px;
+                padding: 1.5rem 1rem;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .glass-card {
+                padding: 1.5rem;
+            }
+
+            .prize-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-info {
+                padding: 2rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--neon-blue), var(--neon-purple));
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, var(--neon-purple), var(--neon-pink));
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(0, 245, 255, 0.1);
+            border-left: 4px solid var(--neon-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Easter Egg Styles */
+        .rainbow-mode {
+            animation: rainbow 2s infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        /* Ripple Effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            top: 100px;
+            right: 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 1rem 1.5rem;
+            color: var(--text-primary);
+            z-index: 10000;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success {
+            border-left: 4px solid var(--neon-green);
+        }
+
+        .toast.error {
+            border-left: 4px solid var(--neon-pink);
+        }
+
+        /* Magnetic Effect for Buttons */
+        .magnetic {
+            transition: transform 0.2s ease;
+        }
+
+        /* 3D Tilt Effect */
+        .tilt {
+            transform-style: preserve-3d;
+            transition: transform 0.1s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Stars Background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Geometric Shapes -->
+    <div class="geometric-bg">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo glitch">INNOVIK JUNIOR HACKATHON 2026</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#problems" class="nav-link">Problems</a></li>
+                <li><a href="#rules" class="nav-link">Rules</a></li>
+                <li><a href="#prizes" class="nav-link">Prizes</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div>
+                <h1 class="fade-in">
+                    INNOVIK JUNIOR HACKATHON 2026
+                    Future Innovators Challenge
+                    Exclusively for School Students (Class X to XII)
+                </h1>
+                <p class="tagline fade-in">Organized By<br>
+                    Vikrant Group of Institutions, Indore<br>
+                    Venue<br>
+                    Centre of Excellence<br>
+                </p>
+                <p class="subtitle fade-in">
+                </p>
+                <p class="date fade-in">15 September 2026</p>
+            </div>
+
+
+            <!-- Countdown Timer -->
+            <div class="countdown-container fade-in">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="" target="_blank" class="btn btn-primary magnetic">Remaining Time</a>
+            </div>
+            <div class="cta-buttons">
+                <a href="https://forms.gle/NVjt42y9USeyWpox7" target="_blank" class="btn btn-primary magnetic">Register
+                    Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <h2 class="section-title">INNOVIK JUNIOR HACKATHON 2026</h2>
+        <div class="about-content">
+            <p>
+                INNOVIK Junior Hackathon 2026 is a one-day innovation competition specially designed for school students
+                of Classes X, XI, and XII. The event provides young innovators with a platform to transform creative
+                ideas into practical solutions for real-world challenges.
+                Participants will work in teams to develop innovative prototypes, models, mobile applications, websites,
+                AI-based solutions, or technology-driven concepts under the guidance of expert mentors. The hackathon
+                aims to inspire creativity, critical thinking, teamwork, entrepreneurship, and future-ready skills among
+                school students.
+                The Junior Hackathon will be organized alongside INNOVIK 6.0 – International Hackathon 2026, allowing
+                students to experience the atmosphere of a prestigious international innovation event.
+            </p>
+            <p>This premier hackathon focuses on themes: <strong>Innovating Today for a Smarter Tomorrow</strong></p>
+
+        </div>
+
+        <div class="about-stats">
+            <div class="stat-card glass-card tilt">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Participants</span>
+            </div>
+            <!-- <div class="stat-card glass-card tilt">
+                <span class="stat-number">₹100000+</span>
+                <span class="stat-label">Prize Pool</span>
+            </div> -->
+            <div class="stat-card glass-card tilt">
+                <span class="stat-number">24</span>
+                <span class="stat-label">Hours</span>
+            </div>
+            <div class="stat-card glass-card tilt">
+                <span class="stat-number">15</span>
+                <span class="stat-label">Problem Statements</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section fade-in">
+        <h2 class="section-title">Program Flow</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <!-- <h1>Day 1</h1> -->
+                    <h3> Registration & Reporting</h3>
+                    <!-- <p>Welcome participants</p> -->
+                    <small>09:00 AM – 09:45 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Welcome & Orientation</h3>
+                    <small>09:45 AM – 10:00 AM </small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Problem Statement Briefing</h3>
+                    <small>10:00 AM – 10:15 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Hackathon Begins</h3>
+                    <small>10:15 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Mentor Interaction</h3>
+                    <small>11:30 AM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Lunch</h3>
+                    <small>01:00 PM – 01:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Prototype Development Continues</h3>
+                    <small>01:30 PM – 03:00 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Project Demonstration</h3>
+                    <small>03:00 PM – 03:30 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Jury Evaluation</h3>
+                    <small>03:30 PM - 03:50 PM</small>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Result Announcement & Prize Distribution</h3>
+                    <small>03:50 – 04:00 PM</small>
+                </div>
+            </div>
+    </section>
+
+    <!-- Problem Statements Section -->
+    <section id="problems" class="section">
+        <h2 class="section-title">Problem Statements</h2>
+        <div class="problems-grid">
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">01</div>
+                        <div class="problem-title">Develop innovative ideas to improve classroom learning using
+                            technology.</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category: Education Technology (EdTech)</div>
+                <div class="problem-theme">Theme: Smart Classroom of the Future</div>
+                <div class="problem-description">
+                    The Smart Classroom of the Future focuses on transforming traditional learning environments into
+                    intelligent, interactive, and technology-driven spaces. By integrating Artificial Intelligence (AI),
+                    the Internet of Things (IoT), Augmented/Virtual Reality (AR/VR), cloud computing, and data
+                    analytics, smart classrooms provide personalized learning experiences, real-time student performance
+                    monitoring, and enhanced collaboration between teachers and students. These classrooms support
+                    digital content, virtual laboratories, automated attendance, adaptive assessments, and remote
+                    learning, making education more engaging, accessible, and effective. The goal is to create a
+                    future-ready education system that develops critical thinking, creativity, problem-solving, and
+                    digital skills among learners.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">02</div>
+                        <div class="problem-title">AI for Education</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Education Technology (EdTech)
+                </div>
+                <div class="problem-theme">Theme: AI for Education</div>
+                <div class="problem-description">
+                    AI for Education focuses on leveraging Artificial Intelligence to enhance teaching, learning, and
+                    educational administration. AI-powered systems can deliver personalized learning experiences,
+                    automate assessments, provide intelligent tutoring, analyze student performance, and support
+                    educators with data-driven insights. By integrating technologies such as machine learning, natural
+                    language processing, and predictive analytics, AI helps improve learning outcomes, increase student
+                    engagement, and streamline academic processes. The objective is to build an inclusive, efficient,
+                    and future-ready education ecosystem that empowers both learners and educators.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">03</div>
+                        <div class="problem-title">Plastic-Free School</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Environment & Sustainability</div>
+                <div class="problem-theme">Theme: Plastic-Free School</div>
+                <div class="problem-description">
+                    The Plastic-Free School theme promotes a clean, healthy, and eco-friendly learning environment by
+                    reducing or eliminating the use of single-use plastics on campus. It encourages sustainable
+                    practices such as using reusable water bottles, cloth bags, steel lunch boxes, paper-based
+                    alternatives, and effective waste segregation and recycling. Through awareness campaigns,
+                    student-led initiatives, and green policies, schools can foster environmental responsibility and
+                    inspire lasting behavioral change. The goal is to create a sustainable campus while educating
+                    students about the importance of protecting the environment for future generations.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">04</div>
+                        <div class="problem-title">Smart Water Conservation</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">
+                    Category:Environment & Sustainability</div>
+                <div class="problem-theme">Theme:
+                    Smart Water Conservation</div>
+                <div class="problem-description">
+                    Smart Water Conservation focuses on using modern technologies to monitor, manage, and optimize water
+                    usage efficiently. By integrating IoT sensors, smart water meters, AI-based analytics, rainwater
+                    harvesting systems, and automated leak detection, organizations and communities can reduce water
+                    wastage and ensure sustainable water management. The theme promotes responsible water consumption,
+                    real-time monitoring, and data-driven decision-making to protect this vital resource. Its objective
+                    is to create a sustainable future by conserving water while meeting the growing needs of society.
+                </div>
+            </div>
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">05</div>
+                        <div class="problem-title">Green & Clean School Campus</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Environment & Sustainability</div>
+                <div class="problem-theme">Theme:
+                    Green & Clean School Campus</div>
+                <div class="problem-description">
+                    The Green & Clean School Campus theme promotes the development of environmentally friendly, clean,
+                    and sustainable educational institutions. It encourages initiatives such as tree plantation, waste
+                    segregation, recycling, energy conservation, water management, cleanliness drives, and the use of
+                    renewable energy. By involving students, teachers, and the community in eco-friendly practices,
+                    schools can create a healthier learning environment while fostering environmental awareness and
+                    social responsibility. The goal is to build sustainable campuses that inspire students to become
+                    responsible citizens and protect the environment for future generations.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">06</div>
+                        <div class="problem-title"> Student Health & Fitness</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Health & Wellness
+                </div>
+                <div class="problem-theme">Theme:Student Health & Fitness</div>
+                <div class="problem-description">
+                    The Student Health & Fitness theme focuses on promoting the physical, mental, and emotional
+                    well-being of students through healthy lifestyle practices and technology-enabled wellness
+                    solutions. It encourages regular physical activity, balanced nutrition, mental health awareness,
+                    fitness tracking, preventive healthcare, and access to health education. Smart technologies such as
+                    fitness apps, wearable devices, AI-based health monitoring, and digital wellness platforms can help
+                    students develop healthy habits and improve overall well-being. The objective is to create a
+                    healthier, more active, and productive learning environment that supports students' academic success
+                    and personal growth.
+                </div>
+            </div>
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">07</div>
+                        <div class="problem-title">Smart Attendance System</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Education Technology (EdTech)</div>
+                <div class="problem-theme">Theme: Smart Attendance System</div>
+                <div class="problem-description">
+                    The Smart Attendance System is a technology-driven solution designed to automate and simplify
+                    student attendance management in educational institutions. Using technologies such as QR codes,
+                    RFID, facial recognition, biometric authentication, AI, and IoT, the system records attendance
+                    quickly, accurately, and securely. It eliminates manual registers, minimizes proxy attendance, and
+                    provides real-time attendance reports, notifications, and analytics for teachers, students, and
+                    parents. The objective is to improve efficiency, enhance transparency, reduce administrative
+                    workload, and support the development of smart, digitally enabled classrooms.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">08</div>
+                        <div class="problem-title">Cyber Safety for Students</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Cyber Security & Digital Safety</div>
+                <div class="problem-theme">Theme:Cyber Safety for Students</div>
+                <div class="problem-description">
+                    The Cyber Safety for Students theme focuses on protecting students from online threats while
+                    promoting responsible and secure use of digital technologies. It encourages awareness of cyber risks
+                    such as phishing, cyberbullying, identity theft, online scams, malware, and privacy breaches.
+                    Through cybersecurity education, safe internet practices, strong password management, digital
+                    citizenship, and the responsible use of social media, students can develop the skills needed to
+                    navigate the online world safely. The objective is to create a secure digital learning environment
+                    where students can confidently use technology while protecting their personal information and online
+                    well-being.
+                </div>
+            </div>
+
+
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">09</div>
+                        <div class="problem-title">Women Safety</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Safety & Security</div>
+                <div class="problem-theme">Theme: Women Safety</div>
+                <div class="problem-description">
+                    The Women Safety theme focuses on developing innovative solutions that enhance the safety, security,
+                    and well-being of women in public and private spaces. It encourages the use of technologies such as
+                    mobile applications, GPS tracking, artificial intelligence, IoT devices, wearable safety gadgets,
+                    emergency alert systems, and smart surveillance to provide real-time assistance and rapid emergency
+                    response. The objective is to empower women with accessible safety tools, promote awareness,
+                    strengthen community support, and create safer environments through technology-driven solutions.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">10</div>
+                        <div class="problem-title">Smart Traffic & Road Safety</div>
+                    </div>
+                </div>
+                <div class="problem-category">Category:Smart Cities & Transportation</div>
+                <div class="problem-theme">Theme: Smart Traffic & Road Safety</div>
+                <div class="problem-description">
+                    The Smart Traffic & Road Safety theme focuses on improving traffic management and enhancing road
+                    safety through intelligent technologies. It encourages the use of Artificial Intelligence (AI), the
+                    Internet of Things (IoT), smart traffic signals, GPS, computer vision, and real-time data analytics
+                    to monitor traffic flow, detect violations, reduce congestion, and respond quickly to accidents. The
+                    theme also promotes safer driving practices, pedestrian protection, and efficient emergency response
+                    systems. Its objective is to create safer, smarter, and more sustainable transportation systems that
+                    reduce road accidents, improve mobility, and enhance the overall quality of urban life.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">11</div>
+                        <div class="problem-title">Digital India for Rural Communities</div>
+                    </div>
+                </div>
+                <div class="problem-category">Category:Digital Inclusion & Rural Development</div>
+                <div class="problem-theme">Theme: Digital India for Rural Communities</div>
+                <div class="problem-description">
+                    The Digital India for Rural Communities theme focuses on leveraging digital technologies to improve
+                    the quality of life and promote inclusive development in rural areas. It encourages innovative
+                    solutions in e-governance, digital education, telemedicine, agriculture, financial inclusion, skill
+                    development, and access to government services. By using technologies such as mobile applications,
+                    cloud computing, Artificial Intelligence (AI), the Internet of Things (IoT), and digital payment
+                    systems, rural communities can gain better access to essential services and economic opportunities.
+                    The objective is to bridge the digital divide, empower rural citizens, and support sustainable,
+                    technology-driven development across villages and underserved regions.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">12</div>
+                        <div class="problem-title">Waste Management using AI</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Environment & Sustainability</div>
+                <div class="problem-theme">Theme: Waste Management using AI</div>
+                <div class="problem-description">
+                    The Waste Management using AI theme focuses on applying Artificial Intelligence (AI) to improve
+                    waste collection, segregation, recycling, and disposal processes. AI-powered technologies such as
+                    computer vision, machine learning, smart sensors, and IoT can automatically identify and classify
+                    waste, optimize collection routes, predict waste generation, and enhance recycling efficiency. These
+                    intelligent solutions help reduce landfill waste, lower operational costs, improve resource
+                    utilization, and promote a cleaner environment. The objective is to build sustainable and smart
+                    waste management systems that support environmental conservation and the development of cleaner
+                    cities and communities.
+                </div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">13</div>
+                        <div class="problem-title">Future School using Robotics & IoT</div>
+                    </div>
+
+                </div>
+                <div class="problem-category"> Category:Education Technology (EdTech)</div>
+                <div class="problem-theme">Theme: Future School using Robotics & IoT</div>
+                <div class="problem-description">
+                    The Future School using Robotics & IoT theme explores the integration of robotics and the Internet
+                    of Things (IoT) to create intelligent, interactive, and technology-enabled learning environments. It
+                    encourages the use of smart classrooms, educational robots, connected devices, automated attendance
+                    systems, intelligent laboratories, and real-time monitoring to enhance teaching and learning
+                    experiences. These technologies foster hands-on learning, creativity, problem-solving,
+                    collaboration, and STEM education while improving campus safety and operational efficiency. The
+                    objective is to build future-ready schools that prepare students with the digital and technical
+                    skills needed for the next generation of innovation and Industry 4.0.</div>
+            </div>
+
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">14</div>
+                        <div class="problem-title">Disaster Management & Emergency Response</div>
+                    </div>
+
+                </div>
+                <div class="problem-category">Category:Public Safety & Disaster Management</div>
+                <div class="problem-theme">Theme: Disaster Management & Emergency Response</div>
+                <div class="problem-description">
+                    The Disaster Management & Emergency Response theme focuses on developing innovative technologies
+                    that improve disaster preparedness, early warning, emergency communication, rescue operations, and
+                    post-disaster recovery. It encourages the use of Artificial Intelligence (AI), the Internet of
+                    Things (IoT), Geographic Information Systems (GIS), drones, satellite data, mobile applications, and
+                    real-time analytics to detect risks, monitor affected areas, coordinate emergency services, and
+                    provide timely assistance. The objective is to minimize the impact of natural and human-made
+                    disasters, protect lives and infrastructure, and build resilient communities through smart,
+                    technology-driven emergency response systems.</div>
+            </div>
+            <div class="problem-card tilt" onclick="toggleProblem(this)">
+                <div class="problem-header">
+                    <div>
+                        <div class="problem-number">15</div>
+                        <div class="problem-title">Open Innovation</div>
+                    </div>
+
+                </div>
+                <div class="problem-category"> Category:
+                    Innovation & Emerging Technologies</div>
+                <div class="problem-theme">Theme: Open Innovation</div>
+                <div class="problem-description">
+                    The Open Innovation theme encourages participants to identify real-world problems and develop
+                    creative, technology-driven solutions without being limited to a specific domain. It welcomes
+                    innovative ideas across areas such as education, healthcare, agriculture, smart cities, environment,
+                    cybersecurity, finance, accessibility, sustainability, and social impact. Participants are free to
+                    leverage emerging technologies such as Artificial Intelligence (AI), the Internet of Things (IoT),
+                    Blockchain, Cloud Computing, Robotics, Augmented/Virtual Reality (AR/VR), and Data Analytics to
+                    design impactful solutions. The objective is to foster creativity, interdisciplinary collaboration,
+                    and innovation that addresses societal, industrial, or global challenges while creating meaningful
+                    value for communities and businesses.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="section fade-in">
+        <h2 class="section-title">Rules & Guidelines</h2>
+        <div class="rules-container">
+            <ul class="rules-list" style="list-style-type: none;">
+                <li>Team size: Up to 4 members;</li>
+                <li class="rules-list">Eligibility:
+                    <ul style="list-style-type: none;" class="rules-list">
+                        <li>Open only for School Students. </li>
+                        <li>Classes X, XI & XII.</li>
+                        <li>CBSE, ICSE and State Board Schools.</li>
+                        <li>Team Size: 2–4 Students.</li>
+                        <li>One School Mentor/Teacher (Optional).</li>
+                    </ul>
+                </li>
+                <li>Originality: All code and assets must be original or properly licensed. Strictly no plagiarism.</li>
+                <li>Rounds: Multiple coding rounds, mentor checkpoints, and evaluations.</li>
+                <li>Judging criteria: Innovation, impact, feasibility, user experience, and presentation.</li>
+                <li>Code of conduct: Respectful, inclusive collaboration is mandatory.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section id="prizes" class="section">
+        <div class="container">
+            <h2 class="section-title">Prizes & rewards</h2>
+            <div class="prize-wrap reveal">
+                <div class="trophy">🏆</div>
+                <div class="pool-badge">₹10,000</div>
+                <div class="prize-grid">
+                    <div class="prize-card">
+                        <span class="medal">🥇</span>
+                        <h4>Winner</h4>
+                        <p style="font-weight:700; font-size:20px">₹5,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🥈</span>
+                        <h4>First Runner-Up</h4>
+                        <p style="font-weight:700; font-size:20px">₹3,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🥉</span>
+                        <h4>Second Runner-Up</h4>
+                        <p style="font-weight:700; font-size:20px">₹2,000</p>
+                    </div>
+                    <div class="prize-card">
+                        <span class="medal">🏅</span>
+                        <h4>Consolation Prize</h4>
+                        <p style="font-weight:700; font-size:20px">Every participant will receive an
+                            E-Certificate/Participation Certificate.</p>
+                    </div>
+                </div>
+                <!-- <p class="extras">🏅 Special Category Prizes • 🎁 Welcome Kit • 🧠 Incubation • 📜 Certificates</p> -->
+
+                <h2 style="margin-bottom:20px">Organizing partners</h2>
+                <div class="partners">
+                    <div class="logo-grid">
+                        <div id="img1" class="logo" style="height: 150px">
+                            <img src="Image/vitm.png" alt="VITM" style="height:60%;opacity:.9">
+                        </div>
+                    </div>
+                    <!-- <div class="logo-grid">
+            <div class="logo" style="height: 150px">
+                <img src="Image/YI.jpg" alt="Yi" style="height:100%;opacity:.9">
+            </div>
+          </div> -->
+                </div>
+                <!-- 
+        <div class="sponsors">
+          <h4 style="margin-bottom:6px">Sponsors</h4>
+          <div class="logo-grid">
+            <div class="logo">Sponsor Logo</div>
+            <div class="logo">Sponsor Logo</div>
+            <div class="logo">Sponsor Logo</div>
+            <div class="logo">Sponsor Logo</div>
+          </div>
+        </div> -->
+            </div>
+        </div>
+          
+    </section>
+
+    <!--Ower organizers-->
+    <section id="organizer" class="section fade-in">
+        <h2 class="section-title">Our Organizers</h2>
+        <div class="organizer-grid">
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/Chair.jpg" alt="Chair"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                </div>
+                <h3> Shri R.S. Rathore </h3>
+                <p>Chairman , VGI</p>
+
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/MD.jpg" alt="MD"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                </div>
+                <h3> Shri Nitin Singh Tomar </h3>
+                <p>Managing Director , VGI</p>
+
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/Tri.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Smt. Garima Singh Tomar </h3>
+
+                <p>Treasurer, VITM</p>
+            </div>
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/AMD.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sandeep Shukla </h3>
+
+                <p>Joint Managing Director , VITM</p>
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/Principla.jpg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Jitendra Singh Dodiya </h3>
+
+                <p> Principal , VITM</p>
+            </div>
+
+            <div class="organizer-card tilt">
+                <div class="organizer-icon">
+                    <img src="Image/HOD (CSE).jpeg" alt="First Prize"
+                        style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+
+                </div>
+                <h3> Dr. Sanmati Jain </h3>
+
+                <p> Head Of Department - CSE , VITM</p>
+            </div>
+            <!-- <div class="organizer-card tilt">
+            <div class="organizer-icon">
+                <img src="Image/HOD(FT).jpg" alt="First Prize" style="width:200px; height:200px; object-fit:contain; margin-bottom:10px;">
+                        
+            </div>
+            <h3> Dr. Sandeep Yadav  </h3>
+            
+            <p> Head Of Department - FT , VITM</p>
+        </div>   -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 8889997217</span>
+                </div>
+                <!-- <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 7566027158</span>
+                </div> -->
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9926465107</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>hackathon@vitmindore.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Vikrant Institute of Technology & Management, Indore</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-link"></i>
+                    <a href="https://forms.gle/NVjt42y9USeyWpox7" target="_blank">Registration Form</a>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.vitm.edu.in/" target="_blank">Official Website</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.facebook.com/vikrant.institutions" target="_blank">facebook</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <a href="https://www.instagram.com/vikrant.indore/" target="_blank">instagram</a>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2873.3188309951774!2d75.794887!3d22.579549!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962f992ea8f8d8b%3A0x88c25aa95f76da8f!2sVikrant%20Group%20of%20Institutions-VITM!5e1!3m2!1sen!2sin!4v1757604449876!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" class="magnetic"><i class="fab fa-discord"></i></a>
+        </div>
+        <p>© 2026 Vikrant Institute of Technology & Management. All rights reserved.</p>
+        <p>Made with ❤️ for innovation and technology</p>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="fab" id="scrollToTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Advanced JavaScript for Premium Interactions
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hidden');
+                initializeAnimations();
+            }, 1500);
+        });
+
+        // Initialize all animations and effects
+        function initializeAnimations() {
+            createStars();
+            createParticles();
+            initializeScrollAnimations();
+            initializeCountdown();
+            initializeMagneticEffect();
+            initializeTiltEffect();
+        }
+
+        // Create animated stars
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 4 + 's';
+                star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            const colors = ['#00f5ff', '#bf00ff', '#ff0080', '#39ff14'];
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Advanced Scroll Effects
+        let ticking = false;
+
+        function updateScrollEffects() {
+            const scrolled = window.pageYOffset;
+            const navbar = document.getElementById('navbar');
+            const scrollProgress = document.getElementById('scrollProgress');
+            const fab = document.getElementById('scrollToTop');
+
+            // Navbar effects
+            if (scrolled > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll progress bar
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (winScroll / height) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+
+            // Floating Action Button
+            if (scrolled > 300) {
+                fab.classList.add('visible');
+            } else {
+                fab.classList.remove('visible');
+            }
+
+            // Parallax effect for hero
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                const rate = scrolled * -0.5;
+                hero.style.transform = `translateY(${rate}px)`;
+            }
+
+            ticking = false;
+        }
+
+        function requestScrollUpdate() {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestScrollUpdate);
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Advanced Scroll Animations
+        function initializeScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+
+                        // Animate timeline items with stagger
+                        if (entry.target.classList.contains('timeline-item')) {
+                            const items = document.querySelectorAll('.timeline-item');
+                            items.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.style.animationDelay = `${index * 0.2}s`;
+                                    item.classList.add('visible');
+                                }, index * 200);
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all animated elements
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .timeline-item').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Countdown Timer
+        function initializeCountdown() {
+            const eventDate = new Date('2026-09-07T11:39:00').getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
+
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                } else {
+                    document.getElementById('days').textContent = '00';
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                }
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Problem card toggle functionality
+        function toggleProblem(card) {
+
+        }
+
+        // Magnetic effect for buttons
+        function initializeMagneticEffect() {
+
+        }
+
+        // 3D Tilt effect
+        function initializeTiltEffect() {
+
+        }
+
+        // Advanced button ripple effect
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                const rect = this.getBoundingClientRect();
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Toast notification system
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+            }, 3000);
+        }
+
+        // Easter egg - Konami code
+        let konamiCode = [];
+        const konamiSequence = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.keyCode);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+
+            if (konamiCode.length === konamiSequence.length &&
+                konamiCode.every((code, index) => code === konamiSequence[index])) {
+
+                document.body.classList.add('rainbow-mode');
+                showToast('🎉 Easter egg activated! Rainbow mode enabled!', 'success');
+
+                setTimeout(() => {
+                    document.body.classList.remove('rainbow-mode');
+                }, 5000);
+            }
+        });
+
+        // Performance optimization - Intersection Observer for images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                // Close mobile menu
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+
+                // Close expanded problem cards
+                document.querySelectorAll('.problem-card.expanded').forEach(card => {
+                    card.classList.remove('expanded');
+                });
+            }
+        });
+
+        // Form validation and submission
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add any form handling logic here
+            console.log('🚀 About INNOVIK 6.0: INNOVIK 6.0 – International Hackathon website loaded successfully!');
+
+            // Show welcome message
+            setTimeout(() => {
+                showToast('INNOVIK JUNIOR HACKATHON 2026 Exclusively for School Students (Class X to XII)🎉', 'success');
+            }, 2000);
+        });
+
+        // Advanced cursor trail effect (optional)
+        let mouseX = 0, mouseY = 0;
+        let trailElements = [];
+
+        function createCursorTrail() {
+            for (let i = 0; i < 10; i++) {
+                const trail = document.createElement('div');
+                trail.style.cssText = `
+                    position: fixed;
+                    width: 4px;
+                    height: 4px;
+                    background: var(--neon-blue);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 9999;
+                    opacity: ${1 - i * 0.1};
+                    transition: all 0.1s ease;
+                `;
+                document.body.appendChild(trail);
+                trailElements.push(trail);
+            }
+        }
+
+        function updateCursorTrail() {
+            trailElements.forEach((trail, index) => {
+                setTimeout(() => {
+                    trail.style.left = mouseX + 'px';
+                    trail.style.top = mouseY + 'px';
+                }, index * 20);
+            });
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            updateCursorTrail();
+        });
+
+        // Initialize cursor trail on desktop only
+        if (window.innerWidth > 768) {
+            createCursorTrail();
+        }
+
+        // Cleanup and optimization
+        window.addEventListener('beforeunload', () => {
+            // Clean up any intervals or listeners
+            console.log('Cleaning up resources...');
+        });
+
+        // Service Worker registration for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>

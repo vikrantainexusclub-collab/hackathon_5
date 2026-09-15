@@ -2537,34 +2537,91 @@
         }
 
         // Countdown Timer
-        function initializeCountdown() {
-            const eventDate = new Date('2026-09-15T11:39:00').getTime();
+        // 6-Hour Reverse Countdown
+function initializeCountdown() {
 
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = eventDate - now;
+    const startTime = new Date('2026-09-15T12:00:00+05:30').getTime();
+    const endTime = new Date('2026-09-15T18:00:00+05:30').getTime();
 
-                if (distance > 0) {
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    function updateCountdown() {
 
-                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-                } else {
-                    document.getElementById('days').textContent = '00';
-                    document.getElementById('hours').textContent = '00';
-                    document.getElementById('minutes').textContent = '00';
-                    document.getElementById('seconds').textContent = '00';
-                }
-            }
+        const now = new Date().getTime();
 
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
+        // Before 12:00 PM
+        if (now < startTime) {
+            updateDisplay(6, 0, 0);
+            return;
         }
+
+        const distance = endTime - now;
+
+        if (distance > 0) {
+
+            const totalHours = Math.floor(
+                distance / (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60)) / (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60)) / 1000
+            );
+
+            updateDisplay(totalHours, minutes, seconds);
+
+        } else {
+
+            updateDisplay(0, 0, 0);
+        }
+    }
+
+    function updateDisplay(hours, minutes, seconds) {
+
+        document.getElementById('days').textContent = '00';
+
+        document.getElementById('hours').textContent =
+            hours.toString().padStart(2, '0');
+
+        document.getElementById('minutes').textContent =
+            minutes.toString().padStart(2, '0');
+
+        document.getElementById('seconds').textContent =
+            seconds.toString().padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+        // function initializeCountdown() {
+        //     const eventDate = new Date('2026-09-15T11:39:00').getTime();
+
+        //     function updateCountdown() {
+        //         const now = new Date().getTime();
+        //         const distance = eventDate - now;
+
+        //         if (distance > 0) {
+        //             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        //             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        //             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        //             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //             document.getElementById('days').textContent = days.toString().padStart(2, '0');
+        //             document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+        //             document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+        //             document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        //         } else {
+        //             document.getElementById('days').textContent = '00';
+        //             document.getElementById('hours').textContent = '00';
+        //             document.getElementById('minutes').textContent = '00';
+        //             document.getElementById('seconds').textContent = '00';
+        //         }
+        //     }
+
+        //     updateCountdown();
+        //     setInterval(updateCountdown, 1000);
+        // }
 
         // Problem card toggle functionality
         function toggleProblem(card) {

@@ -2613,11 +2613,11 @@
         }
 
         // Countdown Timer
-        // 6-Hour Countdown: 12:00 PM to 4:00 PM
+        // 6-Hour Reverse Countdown
 function initializeCountdown() {
 
     const startTime = new Date('2026-09-15T12:00:00+05:30').getTime();
-    const endTime   = new Date('2026-09-15T16:00:00+05:30').getTime();
+    const endTime = new Date('2026-09-15T18:00:00+05:30').getTime();
 
     function updateCountdown() {
 
@@ -2625,7 +2625,7 @@ function initializeCountdown() {
 
         // Before 12:00 PM
         if (now < startTime) {
-            updateDisplay(4, 0, 0);
+            updateDisplay(6, 0, 0);
             return;
         }
 
@@ -2633,7 +2633,7 @@ function initializeCountdown() {
 
         if (distance > 0) {
 
-            const hours = Math.floor(
+            const totalHours = Math.floor(
                 distance / (1000 * 60 * 60)
             );
 
@@ -2645,11 +2645,10 @@ function initializeCountdown() {
                 (distance % (1000 * 60)) / 1000
             );
 
-            updateDisplay(hours, minutes, seconds);
+            updateDisplay(totalHours, minutes, seconds);
 
         } else {
 
-            // At 4:00 PM
             updateDisplay(0, 0, 0);
         }
     }
